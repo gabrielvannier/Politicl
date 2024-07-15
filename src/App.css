@@ -3,7 +3,7 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 20vmin;
   pointer-events: none;
 }
 
@@ -14,8 +14,8 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #ffffff;
+  min-height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,4 +35,15 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.Game-headline {
+  color: black;
+}
+
+.Input-guess {
+  width: 50%;
+  height: 30px;
+  margin-left: auto;
+   margin-right: auto;
 }
