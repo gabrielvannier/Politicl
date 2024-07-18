@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Person } from "./types";
 import { MAX_NUMBER_OF_TRY } from "./constants";
-import { Cell } from "./Cell";
+import { Cell, ColumnHeadlines } from "./Cell";
 
 
 function Guess({ guess, expectedPerson }: { guess: Person | undefined, expectedPerson: Person }) {
@@ -26,6 +26,7 @@ function GuessList(
     return (
         <div className="Guesses">
             <ul>
+                <ColumnHeadlines />
                 {
                     Array.from({ length: MAX_NUMBER_OF_TRY }).map((_, index) => {
                         var guess = undefined

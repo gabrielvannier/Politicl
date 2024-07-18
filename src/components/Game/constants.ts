@@ -1,3 +1,5 @@
+import { ColulmnName } from "./types";
+
 export const MAX_NUMBER_OF_TRY = 6;
 
 export const partyRightnessScore = {
@@ -21,4 +23,12 @@ export const partyRightnessScore = {
 "Rassemblement National" : 10,
 "Les Patriotes" : 10,
 
+}
+
+export const partyTraduction: Record<ColulmnName, string> = {
+    "name":"Nom",
+    "sexe":"Genre",
+    "highestRole":"Plus haute fonction",
+    "birthDate":"Date de naissance",
+    "party":"Parti politique"
 }

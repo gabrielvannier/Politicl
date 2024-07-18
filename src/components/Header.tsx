@@ -21,7 +21,9 @@ function Header() {
                         {...headlineStyle, color: "white"}
                     }>.</span>
                     <span style= {{...headlineStyle, color:"red"}}>fr</span>
-
+                </p>
+                <p className='game-instruction'>
+                    Devine la personnalité politique du jour :
                 </p>
             </header>
         </div>

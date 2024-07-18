@@ -1,8 +1,9 @@
 import React from "react";
 import { ColulmnName } from "./types";
 import { Advice } from "./Advice";
-import {partyRightnessScore} from "./constants";
+import {partyRightnessScore, partyTraduction } from "./constants";
 import { color } from "@mui/system";
+import { text } from "stream/consumers";
 type cellProps = {
     value: string | number | undefined;
     expectedValue: string | number;
@@ -33,6 +34,29 @@ const columnStyle = {
     "party": {
         width: "400px",
     }
+}
+
+function ColumnHeadline({ displayedColumn }: { displayedColumn: ColulmnName }) {
+    const defaultStyle = {
+        ...columnStyle[displayedColumn],
+        lineHeight: "15px",
+        display: "inline-block",
+        fontSize: "16px",
+        //border: "1px solid black",
+        margin: "5px",
+        //textAlign: "left",
+    }
+    return <p style={defaultStyle}>{partyTraduction[displayedColumn]} :</p>
+}
+
+export function ColumnHeadlines() {
+    return <div className="Column-headlines">
+        <ColumnHeadline displayedColumn="sexe" />
+        <ColumnHeadline displayedColumn="highestRole" />
+        <ColumnHeadline displayedColumn="party" />
+        <ColumnHeadline displayedColumn="birthDate" />
+        <ColumnHeadline displayedColumn="name" />
+    </div>
 }
 
 
