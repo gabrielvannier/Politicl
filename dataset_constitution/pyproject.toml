@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "dataset-constitution"
+version = "0.1.0"
+description = "python scripts to build politcl dataset"
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+requests = "^2.32.3"
+bs4 = "^0.0.2"
+pandas = "^2.2.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

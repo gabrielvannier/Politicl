@@ -1,0 +1,509 @@
+Name,gender,HighestFunction,Party,Birth Date,is_worthy_to_be_guessed
+Damien Abad,H,Député,Divers Droite,1980,False
+Caroline Abadie,F,Député,Renaissance,1976,False
+Nadège Abomangoli,F,Député,La France Insoumise,1975,False
+Damien Adam,H,Député,Renaissance,1989,False
+Éric Alauzet,H,Député,Résistons !,1958,False
+Xavier Albertini,H,Député,Horizons,1970,False
+Laurent Alexandre,H,Député,La France Insoumise,1973,False
+Henri Alfandari,H,Député,Horizons,1979,False
+Franck Allisio,H,Député,Rassemblement National,1980,False
+Gabriel Amard,H,Député,La France Insoumise,1967,False
+David Amiel,H,Député,Renaissance,1992,False
+Ségolène Amiot,F,Député,La France Insoumise,1986,False
+Farida Amrani,F,Député,La France Insoumise,1976,False
+Pieyre-Alexandre Anglade,H,Député,Renaissance,1986,False
+Emmanuelle Anthoine,F,Député,Les Républicains,1964,False
+Jean-Philippe Ardouin,H,Député,Renaissance,1964,False
+Rodrigo Arenas,H,Député,La France Insoumise,1974,False
+Antoine Armand,H,Député,Renaissance,1991,False
+Christine Arrighi,F,Député,Europe Écologie Les Verts,1959,False
+Bénédicte Auzanot,F,Député,Rassemblement National,1972,False
+Joël Aviragnet,H,Député,Parti Socialiste,1956,False
+Anne-Laure Babault,F,Député,MoDem,1982,False
+Erwan Balanant,H,Député,MoDem,1971,False
+Philippe Ballard,H,Député,Rassemblement National,1960,False
+Géraldine Bannier,F,Député,MoDem,1979,False
+Christophe Barthès,H,Député,Rassemblement National,1966,False
+Nathalie Bassire,F,Député,Divers Droite,1968,False
+Quentin Bataillon,H,Député,Divers Centre,1993,False
+Marie-Noëlle Battistel,F,Député,Parti Socialiste,1956,False
+Xavier Batut,H,Député,Divers Centre,1976,False
+Romain Baubry,H,Député,Rassemblement National,1989,False
+Julien Bayou,H,Député,Europe Écologie Les Verts,1980,False
+Thibault Bazin,H,Député,Les Républicains,1984,False
+Valérie Bazin-Malgras,F,Député,Les Républicains,1969,False
+Clément Beaune,H,Député,Renaissance,1981,False
+José Beaurain,H,Député,Rassemblement National,1971,False
+Olivier Becht,H,Député,Renaissance,1976,False
+Belkhir Belhaddad,H,Député,Renaissance,1969,False
+Béatrice Bellamy,F,Député,Horizons,1966,False
+Lisa Belluco,F,Député,Europe Écologie Les Verts,1988,False
+Édouard Bénard,H,Député,Parti Communiste Français,1995,False
+Thierry Benoit,H,Député,Horizons,1966,False
+Christophe Bentz,H,Député,Rassemblement National,1987,False
+Fanta Berete,F,Député,Renaissance,1975,False
+Anne Bergantz,F,Député,MoDem,1968,False
+Ugo Bernalicis,H,Député,La France Insoumise,1989,False
+Philippe Berta,H,Député,MoDem,1960,False
+Pierrick Berteloot,H,Député,Rassemblement National,1999,False
+Véronique Besse,F,Député,Divers Droite,1963,False
+Christophe Bex,H,Député,La France Insoumise,1961,False
+Bruno Bilde,H,Député,Rassemblement National,1976,False
+Carlos Martens Bilongo,H,Député,La France Insoumise,1990,False
+Emmanuel Blairy,H,Député,Rassemblement National,1986,False
+Sophie Blanc,F,Député,Rassemblement National,1968,False
+Christophe Blanchet,H,Député,Renaissance,1973,False
+Anne-Laure Blin,F,Député,Les Républicains,1983,False
+Frédéric Boccaletti,H,Député,Rassemblement National,1973,False
+Philippe Bolo,H,Député,MoDem,1967,False
+Manuel Bompard,H,Député,La France Insoumise,1986,False
+Sylvie Bonnet,F,Député,Les Républicains,1969,False
+Émilie Bonnivard,F,Député,Les Républicains,1980,False
+Jean-Yves Bony,H,Député,Les Républicains,1955,False
+Pascale Bordes,F,Député,Rassemblement National,1961,False
+Élisabeth Borne,F,Député,Résistons !,1961,False
+Éric Bothorel,H,Député,Renaissance,1966,False
+Ian Boucard,H,Député,Les Républicains,1988,False
+Florent Boudié,H,Député,Renaissance,1973,False
+Chantal Bouloux,F,Député,Renaissance,1961,False
+Mickaël Bouloux,H,Député,Parti Socialiste,1972,False
+Idir Boumertit,H,Député,La France Insoumise,1974,False
+Jean-Luc Bourgeaux,H,Député,Divers Droite,1963,False
+Jean-Louis Bourlanges,H,Député,MoDem,1946,False
+Soumya Bourouaha,F,Député,Parti Communiste Français,1964,False
+Bertrand Bouyx,H,Député,Renaissance,1970,False
+Jorys Bovet,H,Député,Rassemblement National,1993,False
+Louis Boyard,H,Député,La France Insoumise,2000,False
+Pascale Boyer,F,Député,Renaissance,1965,False
+Yaël Braun-Pivet,F,Député,Renaissance,1970,False
+Maud Bregeon,F,Député,Renaissance,1991,False
+Xavier Breton,H,Député,Les Républicains,1962,False
+Guy Bricout,H,Député,UDI,1944,False
+Jean-Louis Bricout,H,Député,Divers Gauche,1957,False
+Hubert Brigand,H,Député,Les Républicains,1952,False
+Blandine Brocard,F,Député,MoDem,1981,False
+Anthony Brosse,H,Député,Renaissance,1980,False
+Vincent Bru,H,Député,MoDem,1955,False
+Anne Brugnera,F,Député,Résistons !,1970,False
+Danielle Brulebois,F,Député,Renaissance,1947,False
+Fabrice Brun,H,Député,Les Républicains,1968,False
+Philippe Brun,H,Député,Parti Socialiste,1991,False
+Stéphane Buchou,H,Député,Renaissance,1974,False
+Françoise Buffet,F,Député,Divers Centre,1953,False
+Jérôme Buisson,H,Député,Rassemblement National,1973,False
+Frédéric Cabrolier,H,Député,Rassemblement National,1966,False
+Céline Calvez,F,Député,Renaissance,1979,False
+Éléonore Caroit,F,Député,Renaissance,1985,False
+Sylvain Carrière,H,Député,La France Insoumise,1991,False
+Victor Catteau,H,Député,Rassemblement National,1995,False
+Lionel Causse,H,Député,Résistons !,1971,False
+Jean-René Cazeneuve,H,Député,Renaissance,1958,False
+Pierre Cazeneuve,H,Député,Renaissance,1995,False
+Émilie Chandler,F,Député,Renaissance,1983,False
+André Chassaigne,H,Député,Parti Communiste Français,1950,False
+Cyrielle Chatelain,F,Député,Europe Écologie Les Verts,1987,False
+Florian Chauche,H,Député,La France Insoumise,1984,False
+Yannick Chenevard,H,Député,Divers Centre,1959,False
+Sébastien Chenu,H,Député,Rassemblement National,1973,False
+Sophia Chikirou,F,Député,La France Insoumise,1979,False
+Paul Christophe,H,Député,Agir,1971,False
+Roger Chudeau,H,Député,Rassemblement National,1949,False
+Hadrien Clouet,H,Député,La France Insoumise,1991,False
+Fabienne Colboc,F,Député,Renaissance,1971,False
+Claire Colomb-Pitollat,F,Député,Renaissance,1979,False
+Caroline Colombier,F,Député,Rassemblement National,1957,False
+Éric Coquerel,H,Député,La France Insoumise,1958,False
+Alexis Corbière,H,Député,La France Insoumise,1968,False
+Pierre Cordier,H,Député,Les Républicains,1972,False
+François Cormier-Bouligeon,H,Député,Renaissance,1972,False
+Josiane Corneloup,F,Député,Les Républicains,1959,False
+Mickaël Cosson,H,Député,MoDem,1975,False
+Bérangère Couillard,F,Député,Renaissance,1986,False
+Jean-François Coulomme,H,Député,La France Insoumise,1966,False
+Annick Cousin,F,Député,Rassemblement National,1973,False
+Catherine Couturier,F,Député,La France Insoumise,1959,False
+Laurence Cristol,F,Député,Renaissance,1967,False
+Laurent Croizier,H,Député,MoDem,1975,False
+Jean-Pierre Cubertafon,H,Député,MoDem,1948,False
+Nathalie Da Conceicao Carvalho,F,Député,Rassemblement National,1966,False
+Dominique Da Silva,F,Député,Renaissance,1968,False
+Marie-Christine Dalloz,F,Député,Les Républicains,1958,False
+Geneviève Darrieussecq,F,Député,MoDem,1956,False
+Romain Daubié,H,Député,MoDem,1980,False
+Hendrik Davi,H,Député,La France Insoumise,1977,False
+Christine Decodts,F,Député,Renaissance,1966,False
+Arthur Delaporte,H,Député,Parti Socialiste,1991,False
+Stéphane Delautrette,H,Député,Parti Socialiste,1972,False
+Sébastien Delogu,H,Député,La France Insoumise,1987,False
+Julie Delpech,F,Député,Renaissance,1989,False
+Vincent Descœur,H,Député,Les Républicains,1962,False
+Frédéric Descrozaille,H,Député,Renaissance,1967,False
+Mathilde Desjonquères,F,Député,MoDem,1980,False
+Jocelyn Dessigny,F,Député,Rassemblement National,1981,False
+Pierre Dharréville,H,Député,Parti Communiste Français,1975,False
+Fabien Di Filippo,H,Député,Les Républicains,1986,False
+Edwige Diaz,F,Député,Rassemblement National,1987,False
+Benjamin Dirx,H,Député,Renaissance,1979,False
+Julien Dive,H,Député,Les Républicains,1985,False
+Sandrine Dogor-Such,F,Député,Rassemblement National,1970,False
+Nicolas Dragon,H,Député,Rassemblement National,1977,False
+Francis Dubois,H,Député,Divers Droite,1961,False
+Virginie Duby-Muller,F,Député,Les Républicains,1979,False
+Alma Dufour,F,Député,La France Insoumise,1990,False
+Pierre-Henri Dumont,H,Député,Les Républicains,1987,False
+Olivier Dussopt,H,Député,Résistons !,1978,False
+Iñaki Echaniz,H,Député,Parti Socialiste,1993,False
+Philippe Emmanuel,H,Député,Renaissance,1960,False
+Christine Engrand,F,Député,Rassemblement National,1955,False
+Sophie Errante,F,Député,Renaissance,1971,False
+Laurent Esquenet-Goxes,H,Député,MoDem,1962,False
+Martine Étienne,F,Député,La France Insoumise,1956,False
+Philippe Fait,H,Député,Horizons,1969,False
+Frédéric Falcon,H,Député,Rassemblement National,1985,False
+Elsa Faucillon,F,Député,Parti Communiste Français,1981,False
+Olivier Faure,H,Député,Parti Socialiste,1968,False
+Yannick Favennec-Bécot,H,Député,Horizons,1958,False
+Marc Ferracci,H,Député,Renaissance,1977,False
+Sylvie Ferrer,F,Député,La France Insoumise,1967,False
+Jean-Marie Fiévet,H,Député,Renaissance,1964,False
+Agnès Firmin-Le Bodo,F,Député,Horizons,1968,False
+Nicolas Forissier,H,Député,Les Républicains,1961,False
+Grégoire de Fournas,H,Député,Rassemblement National,1985,False
+Charles Fournier,H,Député,Europe Écologie Les Verts,1968,False
+Thibaut François,H,Député,Rassemblement National,1989,False
+Thierry Frappé,H,Député,Rassemblement National,1952,False
+Philippe Frei,H,Député,Renaissance,1968,False
+Martine Froger,F,Député,Parti Socialiste,1961,False
+Bruno Fuchs,H,Député,MoDem,1959,False
+Jean-Luc Fugit,H,Député,Renaissance,1969,False
+Stéphanie Galzy,F,Député,Rassemblement National,1981,False
+Marie-Charlotte Garin,F,Député,Europe Écologie Les Verts,1995,False
+Guillaume Garot,H,Député,Parti Socialiste,1966,False
+Raquel Garrido,F,Député,La France Insoumise,1974,False
+Thomas Gassilloud,H,Député,Agir,1981,False
+Maud Gatel,F,Député,MoDem,1979,False
+Jean-Jacques Gaultier,H,Député,Les Républicains,1963,False
+Luc Geismar,H,Député,MoDem,1966,False
+Anne Genetet,F,Député,Renaissance,1963,False
+Annie Genevard,F,Député,Les Républicains,1956,False
+Félicie Gérard,F,Député,Horizons,1974,False
+Raphaël Gérard,H,Député,Renaissance,1968,False
+François Gernigon,H,Député,Horizons,1961,False
+Hadrien Ghomi,H,Député,Renaissance,1989,False
+Frank Giletti,H,Député,Rassemblement National,1973,False
+Yoann Gillet,H,Député,Rassemblement National,1986,False
+Christian Girard,H,Député,Rassemblement National,1952,False
+Éric Girardin,H,Député,Renaissance,1962,False
+Olga Givernet,F,Député,Renaissance,1981,False
+José Gonzalez,H,Député,Rassemblement National,1943,False
+Philippe Gosselin,H,Député,Les Républicains,1966,False
+Guillaume Gouffier Valente,H,Député,Renaissance,1986,False
+Florence Goulet,F,Député,Rassemblement National,1961,False
+Perrine Goulet,F,Député,MoDem,1978,False
+Carole Grandjean,F,Député,Renaissance,1983,False
+Géraldine Grangier,F,Député,Rassemblement National,1975,False
+Daniel Grenon,H,Député,Rassemblement National,1948,False
+Justine Gruet,F,Député,Les Républicains,1989,False
+Jérôme Guedj,H,Député,Parti Socialiste,1972,False
+Clémence Guetté,F,Député,La France Insoumise,1991,False
+Claire Guichard,F,Député,Renaissance,1967,False
+Michel Guiniot,H,Député,Rassemblement National,1954,False
+David Guiraud,H,Député,La France Insoumise,1992,False
+Jordan Guitton,H,Député,Rassemblement National,1995,False
+Victor Habert-Dassault,H,Député,Les Républicains,1992,False
+David Habib,H,Député,Divers Gauche,1961,False
+Meyer Habib,H,Député,UDI,1961,False
+Benjamin Haddad,H,Député,Renaissance,1985,False
+Nadia Hai,F,Député,Renaissance,1980,False
+Marine Hamelet,F,Député,Rassemblement National,1967,False
+Yannick Haury,H,Député,Renaissance,1954,False
+Pierre Henriet,H,Député,Horizons,1991,False
+Michel Herbillon,H,Député,Les Républicains,1951,False
+Patrick Hetzel,H,Député,Les Républicains,1964,False
+Mathilde Hignet,F,Député,La France Insoumise,1993,False
+Alexandre Holroyd,H,Député,Renaissance,1987,False
+Sacha Houlié,H,Député,Renaissance,1988,False
+Timothée Houssin,H,Député,Rassemblement National,1988,False
+Éric Husson,H,Député,Renaissance,1963,False
+Monique Iborra,F,Député,Renaissance,1945,False
+Jérémie Iordanoff,H,Député,Europe Écologie Les Verts,1983,False
+Cyrille Isaac-Sibille,H,Député,MoDem,1958,False
+Alexis Izard,H,Député,Renaissance,1992,False
+Laurent Jacobelli,H,Député,Rassemblement National,1969,False
+Jean-Michel Jacques,H,Député,Renaissance,1968,False
+Élodie Jacquier-Laforge,F,Député,MoDem,1978,False
+Caroline Janvier,F,Député,Renaissance,1982,False
+Catherine Jaouen,F,Député,Rassemblement National,1962,False
+François Jolivet,H,Député,Horizons,1966,False
+Alexis Jolly,H,Député,Rassemblement National,1990,False
+Sandrine Josso,F,Député,MoDem,1975,False
+Chantal Jourdan,F,Député,Parti Socialiste,1958,False
+Sébastien Jumel,H,Député,Parti Communiste Français,1971,False
+Philippe Juvin,H,Député,Les Républicains,1964,False
+Mansour Kamardine,H,Député,Les Républicains,1959,False
+Marietta Karamanli,F,Député,Divers Gauche,1964,False
+Rachel Keke,F,Député,La France Insoumise,1974,False
+Fatiha Keloua-Hachi,F,Député,Parti Socialiste,1971,False
+Andy Kerbrat,H,Député,La France Insoumise,1990,False
+Loïc Kervran,H,Député,Horizons,1984,False
+Brigitte Klinkert,F,Député,Renaissance,1956,False
+Stéphanie Kochert,F,Député,Horizons,1975,False
+Daniel Labaronne,H,Député,Renaissance,1955,False
+Bastien Lachaud,H,Député,La France Insoumise,1980,False
+Emmanuel Lacresse,H,Député,Renaissance,1971,False
+Julie Laernoes,F,Député,Europe Écologie Les Verts,1982,False
+Maxime Laisney,H,Député,La France Insoumise,1981,False
+Amal Amélia Lakrafi,F,Député,Renaissance,1978,False
+Luc Lamirault,H,Député,Horizons,1962,False
+Virginie Lanlo,F,Député,UDI,1968,False
+Hélène Laporte,F,Député,Rassemblement National,1978,False
+Mohamed Laqhila,H,Député,MoDem,1959,False
+Jean-Charles Larsonneur,H,Député,Renaissance,1984,False
+Florence Lasserre,F,Député,MoDem,1974,False
+Philippe Latombe,H,Député,MoDem,1975,False
+Michel Lauzzana,H,Député,Renaissance,1957,False
+Laure Lavalette,F,Député,Rassemblement National,1976,False
+Pascal Lavergne,H,Député,Renaissance,1967,False
+Sandrine Le Feur,F,Député,Renaissance,1991,False
+Marc Le Fur,H,Député,Les Républicains,1956,False
+Didier Le Gac,H,Député,Renaissance,1965,False
+Arnaud Le Gall,H,Député,La France Insoumise,1980,False
+Gilles Le Gendre,H,Député,Renaissance,1958,False
+Constance Le Grip,F,Député,Agir,1960,False
+Anne Le Hénanff,F,Député,Horizons,1969,False
+Annaïg Le Meur,F,Député,Renaissance,1973,False
+Christine Le Nabour,F,Député,Renaissance,1964,False
+Nicole Le Peih,F,Député,Renaissance,1959,False
+Marine Le Pen,F,Député,Rassemblement National,1968,False
+Fabrice Le Vigoureux,H,Député,Renaissance,1969,False
+Antoine Léaument,H,Député,La France Insoumise,1989,False
+Élise Leboucher,F,Député,La France Insoumise,1982,False
+Pascal Lecamp,H,Député,MoDem,1958,False
+Julie Lechanteux,F,Député,Rassemblement National,1977,False
+Jean-Paul Lecoq,H,Député,Parti Communiste Français,1958,False
+Vincent Ledoux,H,Député,Renaissance,1966,False
+Charlotte Leduc,F,Député,La France Insoumise,1980,False
+Mathieu Lefèvre,H,Député,Renaissance,1986,False
+Sarah Legrain,F,Député,La France Insoumise,1985,False
+Gisèle Lelouis,F,Député,Rassemblement National,1952,False
+Didier Lemaire,H,Député,Horizons,1975,False
+Patricia Lemoine,F,Député,Agir,1961,False
+Hervé de Lépinau,H,Député,Rassemblement National,1969,False
+Murielle Lepvraud,F,Député,La France Insoumise,1974,False
+Gérard Leseul,H,Député,Parti Socialiste,1960,False
+Katiana Levavasseur,F,Député,Rassemblement National,1970,False
+Delphine Lingemann,F,Député,MoDem,1972,False
+Brigitte Liso,F,Député,Renaissance,1959,False
+Christine Loir,F,Député,Rassemblement National,1977,False
+Aurélien Lopez-Liguori,H,Député,Rassemblement National,1993,False
+Philippe Lottiaux,H,Député,Rassemblement National,1966,False
+Alexandre Loubet,H,Député,Rassemblement National,1994,False
+Véronique Louwagie,F,Député,Les Républicains,1961,False
+Jean-François Lovisolo,H,Député,Renaissance,1968,False
+Aude Luquet,F,Député,MoDem,1967,False
+Lise Magnier,F,Député,Horizons,1984,False
+Sylvain Maillard,H,Député,Renaissance,1974,False
+Laurence Maillart-Méhaignerie,F,Député,Renaissance,1967,False
+Emmanuel Mandon,H,Député,MoDem,1965,False
+Emmanuel Maquet,H,Député,Les Républicains,1968,False
+Jacqueline Maquet,F,Député,Résistons !,1949,False
+Matthieu Marchio,H,Député,Rassemblement National,1993,False
+Louis Margueritte,H,Député,Renaissance,1984,False
+Christophe Marion,H,Député,Renaissance,1973,False
+Olivier Marleix,H,Député,Les Républicains,1971,False
+Sandra Marsaud,F,Député,Renaissance,1974,False
+Alexandra Martin,F,Député,Renaissance,1976,False
+Didier Martin,H,Député,Renaissance,1956,False
+Élisa Martin,F,Député,La France Insoumise,1972,False
+Pascale Martin,F,Député,La France Insoumise,1961,False
+William Martinet,H,Député,La France Insoumise,1988,False
+Michèle Martinez,F,Député,Rassemblement National,1968,False
+Denis Masséglia,H,Député,Renaissance,1981,False
+Alexandra Masson,F,Député,Rassemblement National,1971,False
+Bryan Masson,H,Député,Rassemblement National,1996,False
+Max Mathiasin,H,Député,Divers Gauche,1956,False
+Frédéric Mathieu,H,Député,La France Insoumise,1977,False
+Jean-Paul Mattei,H,Député,MoDem,1954,False
+Damien Maudet,H,Député,La France Insoumise,1996,False
+Kévin Mauvieux,H,Député,Rassemblement National,1991,False
+Marianne Maximi,F,Député,La France Insoumise,1985,False
+Stéphane Mazars,H,Député,Renaissance,1969,False
+Graziella Melchior,F,Député,Renaissance,1960,False
+Joëlle Mélin,F,Député,Rassemblement National,1950,False
+Yaël Menache,F,Député,Rassemblement National,1985,False
+Thomas Ménagé,H,Député,Rassemblement National,1992,False
+Ludovic Mendes,H,Député,Renaissance,1987,False
+Lysiane Métayer,F,Député,Résistons !,1963,False
+Sophie Mette,F,Député,MoDem,1959,False
+Frédérique Meunier,F,Député,Les Républicains,1960,False
+Manon Meunier,F,Député,La France Insoumise,1996,False
+Pierre Meurin,H,Député,Rassemblement National,1989,False
+Marjolaine Meynier-Millefert,F,Député,Résistons !,1982,False
+Paul Midy,H,Député,Renaissance,1983,False
+Laure Miller,F,Député,Renaissance,1983,False
+Bruno Millienne,H,Député,MoDem,1959,False
+Maxime Minot,H,Député,Les Républicains,1987,False
+Yannick Monnet,H,Député,Parti Communiste Français,1975,False
+Véronique de Montchalin,F,Député,Renaissance,1948,False
+Morel,H,Député,MoDem,1995,False
+Benoît Mournet,H,Député,Renaissance,1986,False
+Naïma Moutchou,F,Député,Horizons,1980,False
+Serge Muller,H,Député,Rassemblement National,1976,False
+Christophe Naegelen,H,Député,Divers Droite,1983,False
+Philippe Naillet,H,Député,Parti Socialiste,1960,False
+Yannick Neuder,H,Député,Les Républicains,1969,False
+Jérôme Nury,H,Député,Les Républicains,1972,False
+Danièle Obono,F,Député,La France Insoumise,1980,False
+Julien Odoul,H,Député,Rassemblement National,1985,False
+Karl Olive,H,Député,Renaissance,1969,False
+Hubert Ott,H,Député,MoDem,1964,False
+Nathalie Oziol,F,Député,La France Insoumise,1990,False
+Nicolas Pacquot,H,Député,Renaissance,1978,False
+Didier Padey,H,Député,MoDem,1965,False
+Jimmy Pahun,H,Député,MoDem,1962,False
+Bertrand Pancher,H,Député,Divers Centre,1958,False
+Laurent Panifous,H,Député,Divers Gauche,1976,False
+Sophie Panonacle,F,Député,Renaissance,1968,False
+Astrid Panosyan-Bouvet,F,Député,Renaissance,1971,False
+Mathilde Panot,F,Député,La France Insoumise,1989,False
+Didier Parakian,H,Député,Renaissance,1964,False
+Didier Paris,H,Député,Renaissance,1954,False
+Mathilde Paris,F,Député,Rassemblement National,1985,False
+Caroline Parmentier,F,Député,Rassemblement National,1965,False
+Charlotte Parmentier-Lecocq,F,Député,Renaissance,1977,False
+Francesca Pasquini,F,Député,Europe Écologie Les Verts,1981,False
+Jérémie Patrier-Leitus,H,Député,Horizons,1989,False
+Emmanuel Pellerin,H,Député,Renaissance,1970,False
+Isabelle Périgault,F,Député,Les Républicains,1971,False
+Patrice Perrot,H,Député,Renaissance,1964,False
+Anne-Laurence Petel,F,Député,Renaissance,1970,False
+Christelle Petex-Levet,F,Député,Les Républicains,1980,False
+Bertrand Petit,H,Député,Parti Socialiste,1964,False
+Frédéric Petit,H,Député,MoDem,1961,False
+Maud Petit,F,Député,MoDem,1971,False
+Stéphane Peu,H,Député,Parti Communiste Français,1962,False
+Michèle Peyron,F,Député,Résistons !,1961,False
+Kévin Pfeffer,H,Député,Rassemblement National,1990,False
+Anna Pic,F,Député,Parti Socialiste,1978,False
+René Pilato,H,Député,La France Insoumise,1962,False
+François Piquemal,H,Député,La France Insoumise,1984,False
+Christine Pirès-Beaune,F,Député,Parti Socialiste,1964,False
+Béatrice Piron,F,Député,Renaissance,1965,False
+Christophe Plassard,H,Député,Horizons,1967,False
+Marie Pochon,F,Député,Europe Écologie Les Verts,1990,False
+Lisette Pollet,F,Député,Rassemblement National,1968,False
+Jean-Pierre Pont,H,Député,Renaissance,1950,False
+Thomas Portes,H,Député,La France Insoumise,1985,False
+Alexandre Portier,H,Député,Les Républicains,1990,False
+Dominique Potier,F,Député,Parti Socialiste,1964,False
+Josy Poueyto,F,Député,MoDem,1954,False
+Éric Poulliat,H,Député,Renaissance,1974,False
+Marie-Agnès Poussier-Winsback,F,Député,Horizons,1967,False
+Natalia Pouzyreff,F,Député,Renaissance,1961,False
+Philippe Pradal,H,Député,Horizons,1963,False
+Aurélien Pradié,H,Député,Les Républicains,1986,False
+Loïc Prud'homme,H,Député,La France Insoumise,1969,False
+Adrien Quatennens,H,Député,La France Insoumise,1990,False
+Valérie Rabault,F,Député,Parti Socialiste,1973,False
+Stéphane Rambaud,H,Député,Rassemblement National,1960,False
+Richard Ramos,H,Député,MoDem,1968,False
+Angélique Ranc,F,Député,Rassemblement National,1988,False
+Julien Rancoule,H,Député,Rassemblement National,1993,False
+Jean-Claude Raux,H,Député,Europe Écologie Les Verts,1967,False
+Nicolas Ray,H,Député,Les Républicains,1981,False
+Rémy Rebeyrotte,H,Député,Résistons !,1966,False
+Robin Reda,H,Député,Renaissance,1991,False
+Sandra Regol,F,Député,Europe Écologie Les Verts,1978,False
+Davy Rimane,H,Député,Divers Gauche,1979,False
+Véronique Riotton,F,Député,Renaissance,1969,False
+Stéphanie Rist,F,Député,Renaissance,1973,False
+Marie-Pierre Rixain,F,Député,Renaissance,1977,False
+Laurence Robert-Dehault,F,Député,Rassemblement National,1964,False
+Charles Rodwell,H,Député,Agir,1996,False
+Vincent Rolland,H,Député,Les Républicains,1970,False
+Sébastien Rome,H,Député,La France Insoumise,1978,False
+Xavier Roseren,H,Député,Renaissance,1970,False
+Claudia Rouaux,F,Député,Parti Socialiste,1963,False
+Béatrice Roullaud,F,Député,Rassemblement National,1960,False
+Sandrine Rousseau,F,Député,Europe Écologie Les Verts,1972,False
+Fabien Roussel,H,Député,Parti Communiste Français,1969,False
+Jean-François Rousset,H,Député,Renaissance,1952,False
+Lionel Royer-Perreaut,H,Député,Divers Droite,1972,False
+Thomas Rudigoz,H,Député,Renaissance,1971,False
+Anaïs Sabatini,F,Député,Rassemblement National,1990,False
+Alexandre Sabatou,H,Député,Rassemblement National,1993,False
+Benjamin Saint-Huile,H,Député,Divers Gauche,1983,False
+Laetitia Saint-Paul,F,Député,Renaissance,1981,False
+Aurélien Saintoul,H,Député,La France Insoumise,1988,False
+Michel Sala,H,Député,La France Insoumise,1954,False
+Émeric Salmon,H,Député,Rassemblement National,1973,False
+Nicolas Sansu,H,Député,Parti Communiste Français,1968,False
+Isabelle Santiago,F,Député,Parti Socialiste,1965,False
+Éva Sas,F,Député,Europe Écologie Les Verts,1970,False
+Hervé Saulignac,H,Député,Parti Socialiste,1970,False
+Raphaël Schellenberger,H,Député,Les Républicains,1990,False
+Philippe Schreck,H,Député,Rassemblement National,1972,False
+Sabrina Sebaihi,F,Député,Europe Écologie Les Verts,1981,False
+Vincent Seitlinger,H,Député,Les Républicains,1987,False
+Mikaele Seo,F,Député,Renaissance,1971,False
+Nathalie Serre,F,Député,Les Républicains,1968,False
+Danielle Simonnet,F,Député,La France Insoumise,1971,False
+Charles Sitzenstuhl,H,Député,Agir,1988,False
+Bertrand Sorre,H,Député,Renaissance,1965,False
+Ersilia Soudais,F,Député,La France Insoumise,1988,False
+Violette Spillebout,F,Député,Renaissance,1972,False
+Anne Stambach-Terrenoir,F,Député,La France Insoumise,1980,False
+Bruno Studer,H,Député,Renaissance,1978,False
+Michèle Tabarot,F,Député,Les Républicains,1962,False
+Aurélien Taché,H,Député,Europe Écologie Les Verts,1984,False
+Emmanuel Taché de La Pagerie,H,Député,Rassemblement National,1975,False
+Jean-Pierre Taite,H,Député,Les Républicains,1962,False
+Jean-Philippe Tanguy,H,Député,Rassemblement National,1986,False
+Liliana Tanguy,F,Député,Renaissance,1967,False
+Sarah Tanzilli,F,Député,Renaissance,1985,False
+David Taupiac,H,Député,Divers Gauche,1975,False
+Andrée Taurinya,F,Député,La France Insoumise,1963,False
+Matthias Tavel,H,Député,La France Insoumise,1987,False
+Michaël Taverne,H,Député,Rassemblement National,1979,False
+Jean-Marc Tellier,H,Député,Parti Communiste Français,1969,False
+Jean Terlier,H,Député,Renaissance,1977,False
+Jean-Louis Thiériot,H,Député,Les Républicains,1969,False
+Nicolas Thierry,H,Député,Europe Écologie Les Verts,1975,False
+Sabine Thillaye,F,Député,MoDem,1959,False
+Mélanie Thomin,F,Député,Parti Socialiste,1984,False
+Huguette Tiegna,F,Député,Renaissance,1982,False
+Lionel Tivoli,H,Député,Rassemblement National,1988,False
+Stéphane Travert,H,Député,Renaissance,1969,False
+Aurélie Trouvé,F,Député,La France Insoumise,1979,False
+Nicolas Turquois,H,Député,MoDem,1972,False
+Cécile Untermaier,F,Député,Parti Socialiste,1951,False
+Isabelle Valentin,F,Député,Les Républicains,1962,False
+Boris Vallaud,H,Député,Parti Socialiste,1975,False
+Pierre Vatin,H,Député,Les Républicains,1967,False
+Olivier Véran,H,Député,Renaissance,1980,False
+Antoine Vermorel-Marques,H,Député,Les Républicains,1993,False
+Laurence Vichnievsky,F,Député,MoDem,1955,False
+Roger Vicot,H,Député,Parti Socialiste,1963,False
+Annie Vidal,F,Député,Renaissance,1956,False
+Jean-Pierre Vigier,H,Député,Les Républicains,1969,False
+Philippe Vigier,H,Député,MoDem,1958,False
+Patrick Vignal,H,Député,Renaissance,1958,False
+Corinne Vignon,F,Député,Renaissance,1963,False
+Juliette Vilgrain,F,Député,Horizons,1960,False
+Antoine Villedieu,H,Député,Rassemblement National,1989,False
+André Villiers,H,Député,Horizons,1954,False
+Alexandre Vincendet,H,Député,Les Républicains,1983,False
+Anne-Cécile Violland,F,Député,Horizons,1973,False
+Stéphane Viry,H,Député,Les Républicains,1969,False
+Stéphane Vojetta,H,Député,Divers Centre,1974,False
+Lionel Vuibert,H,Député,Agir,1968,False
+Guillaume Vuilletet,H,Député,Renaissance,1967,False
+Léo Walter,H,Député,La France Insoumise,1972,False
+Jean-Luc Warsmann,H,Député,Divers Droite,1965,False
+Christopher Weissberg,H,Député,Renaissance,1985,False
+Jiovanny William,H,Député,Divers Gauche,1985,False
+Éric Woerth,H,Député,Divers Droite,1956,False
+Caroline Yadan,F,Député,Renaissance,1968,False
+Estelle Youssouffa,F,Député,Divers Droite,1978,False
+Jean-Marc Zulesi,H,Député,Renaissance,1988,False

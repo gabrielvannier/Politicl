@@ -9,7 +9,7 @@ function Header() {
         color: "blue",
         fontWeight : "bold",
         //contour the text
-        webkitTextStroke: "1px black",
+        WebkitTextStroke: "1px black",
     }
     return (
         <div className="Header">

@@ -67,8 +67,7 @@ export function Cell({ value, expectedValue, displayedColumn, displayOrder }: ce
         if (value === undefined) {
             return;
         }
-        console.log("setShouldDisplay", value, displayOrder);
-        setTimeout(() => setShouldDisplay(true), 700 * displayOrder);
+        setTimeout(() => setShouldDisplay(true), 700 * displayOrder - 650);
     }, [value]);
 
     const defaultStyle = {
