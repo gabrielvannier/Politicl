@@ -1,4 +1,3 @@
-Nom,gender,Date de Naissance,Parti,Plus Haute Fonction Exercée
 Charles de Gaulle,M,22 novembre 1890,Union pour la Nouvelle République,Président
 Georges Pompidou,M,5 juillet 1911,Union des Démocrates pour la République,Président
 Valéry Giscard d'Estaing,M,2 février 1926,Républicains Indépendants,Président
@@ -6,8 +5,7 @@ François Mitterrand,M,26 octobre 1916,Parti Socialiste,Président
 Jacques Chirac,M,29 novembre 1932,Rassemblement pour la République,Président
 Nicolas Sarkozy,M,28 janvier 1955,Union pour un Mouvement Populaire,Président
 François Hollande,M,12 août 1954,Parti Socialiste,Président
-Emmanuel Macron,M,21 décembre 1977,La République En Marche!,Président
-
+Emmanuel Macron,M,21 décembre 1977,Renaissance,Président
 Michel Debré,M,15 janvier 1912,Union pour la Nouvelle République,Premier ministre
 Jacques Chaban-Delmas,M,15 mars 1915,Union des Démocrates pour la République,Premier ministre
 Pierre Messmer,M,20 mars 1916,Union des Démocrates pour la République,Premier ministre
@@ -28,9 +26,8 @@ Manuel Valls,M,13 août 1962,Parti Socialiste,Premier ministre
 Bernard Cazeneuve,M,2 juin 1963,Parti Socialiste,Premier ministre
 Édouard Philippe,M,28 novembre 1970,Les Républicains,Premier ministre
 Jean Castex,M,25 juin 1965,Les Républicains,Premier ministre
-Élisabeth Borne,F,18 avril 1961,La République En Marche!,Premier ministre
-Gabriel Attal,M,16 mars 1989,La République En Marche!,Premier ministre
-
+Élisabeth Borne,F,18 avril 1961,Renaissance,Premier ministre
+Gabriel Attal,M,16 mars 1989,Renaissance,Premier ministre
 Simone Veil,F,13 juillet 1927,Union pour la Démocratie Française,Ministre
 Jacques Delors,M,20 juillet 1925,Parti Socialiste,Ministre
 Robert Schuman,M,29 juin 1886,Mouvement Républicain Populaire,Ministre
@@ -45,34 +42,32 @@ Ségolène Royal,F,22 septembre 1943,Parti Socialiste,Ministre
 Jean François Copé,M,5 mai 1964,Les Républicains,Ministre
 Najat Vallaud-Belkacem,F,4 octobre 1977,Parti Socialiste,Ministre
 Christiane Taubira,F,2 février 1952,Parti Socialiste,Ministre
-Olivier Véran,M,22 avril 1980,La République En Marche!,Ministre
-Gérald Darmanin,M,11 octobre 1982,La République En Marche!,Ministre
-Marlène Schiappa,F,18 novembre 1982,La République En Marche!,Ministre
-Éric Dupond-Moretti,M,20 avril 1961,La République En Marche!,Ministre
+Olivier Véran,M,22 avril 1980,Renaissance,Ministre
+Gérald Darmanin,M,11 octobre 1982,Renaissance,Ministre
+Marlène Schiappa,F,18 novembre 1982,Renaissance,Ministre
+Éric Dupond-Moretti,M,20 avril 1961,Renaissance,Ministre
 Roselyne Bachelot,F,24 décembre 1946,Les Républicains,Ministre
-Rachida Dati,F,27 novembre 1965,La République En Marche!,Ministre
-Amélie Oudéa-Castéra,F,6 janvier 1978,La République En Marche!,Ministre
+Rachida Dati,F,27 novembre 1965,Renaissance,Ministre
+Amélie Oudéa-Castéra,F,6 janvier 1978,Renaissance,Ministre
 Myriam El Khomri,F,22 février 1978,Parti Socialiste,Ministre
-Aurore Bergé,F,13 février 1986,La République En Marche!,Ministre
-
-Jean-Luc Mélenchon,M,19 août 1951,La France Insoumise,chef de parti
-Marine Le Pen,F,5 août 1968,Rassemblement National,chef de parti
-Nicolas Dupont-Aignan,M,7 mars 1961,Debout la France,chef de parti
-Florian Philippot,M,24 octobre 1981,Les Patriotes,chef de parti
-Yannick Jadot,M,27 juillet 1967,Europe Écologie Les Verts,chef de parti
-Stanislas Guerini,M,14 mai 1982,La République En Marche!,chef de parti
-Jordan Bardella,M,13 septembre 1995,Rassemblement National,chef de parti
-Fabien Roussel,M,16 avril 1969,Parti Communiste Français,chef de parti
-Laurent Wauquiez,M,12 avril 1975,Les Républicains,chef de parti
-Eric Ciotti,M,28 septembre 1965,Les Républicains,chef de parti
-
-Louis Boyard,M,26 aout 2000,La France Insoumise,député
-Sandrine Rousseau,F,25 janvier 1972,Europe Écologie Les Verts,député
-Mathilde Panot,F,15 janvier 1989,La France Insoumise,député
-Yaël Braun-Pivet,F,7 Décembre 1970,La République En Marche!,député
-Clémence Guetté,F,15 Mars 1991,La France Insoumise,député
-Olivier Faure,M,18 août 1968,Parti Socialiste,député
-Manon Aubry,F,22 juillet 1989,La France Insoumise,député
-Clémentine Autain,F,26 Mai 1973,La France Insoumise,député
-François Ruffin,M,18 octobre 1975,La France Insoumise,député
-Alexis Corbière,M,17 août 1968,La France Insoumise,député
+Aurore Bergé,F,13 février 1986,Renaissance,Ministre
+Jean-Luc Mélenchon,M,19 août 1951,La France Insoumise,Chef de parti
+Marine Le Pen,F,5 août 1968,Rassemblement National,Chef de parti
+Nicolas Dupont-Aignan,M,7 mars 1961,Debout la France,Chef de parti
+Florian Philippot,M,24 octobre 1981,Les Patriotes,Chef de parti
+Yannick Jadot,M,27 juillet 1967,Europe Écologie Les Verts,Chef de parti
+Stanislas Guerini,M,14 mai 1982,Renaissance,Chef de parti
+Jordan Bardella,M,13 septembre 1995,Rassemblement National,Chef de parti
+Fabien Roussel,M,16 avril 1969,Parti Communiste Français,Chef de parti
+Laurent Wauquiez,M,12 avril 1975,Les Républicains,Chef de parti
+Eric Ciotti,M,28 septembre 1965,Les Républicains,Chef de parti
+Louis Boyard,M,26 aout 2000,La France Insoumise,Député
+Sandrine Rousseau,F,25 janvier 1972,Europe Écologie Les Verts,Député
+Mathilde Panot,F,15 janvier 1989,La France Insoumise,Député
+Yaël Braun-Pivet,F,7 Décembre 1970,Renaissance,Député
+Clémence Guetté,F,15 Mars 1991,La France Insoumise,Député
+Olivier Faure,M,18 août 1968,Parti Socialiste,Député
+Manon Aubry,F,22 juillet 1989,La France Insoumise,Député
+Clémentine Autain,F,26 Mai 1973,La France Insoumise,Député
+François Ruffin,M,18 octobre 1975,La France Insoumise,Député
+Alexis Corbière,M,17 août 1968,La France Insoumise,Député

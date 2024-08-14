@@ -10,6 +10,7 @@ export const partyRightnessScore = {
 "Union des Démocrates pour la République" : 4,
 
 "La République En Marche !" : 6,
+"Renaissance" : 6,
 "Union pour la Démocratie Française" : 6,
 "Union pour la Défense de la République" : 6,
 

@@ -9,8 +9,13 @@ function Game() {
     const [possibleGuessesRecord, setPossibleGuessesRecord] = useState<Record<string, Person>>({});
     const [isLoading, setIsLoading] = useState(true);
     const [expectedPerson, setExpectedPerson] = useState<Person | undefined>();
-
+    const homeMadeRandom = (seed:number)=> {
+        var x = Math.sin(seed) * 10000;
+        return Math.floor((x - Math.floor(x))*70);
+    }
+    console.log("random = ",homeMadeRandom(3))
     const selectExpectedPerson = () => {
+        console.log('im called here')
         const possibleGuesses = Object.values(possibleGuessesRecord);
         const randomIndex = Math.floor(Math.random() * possibleGuesses.length);
         return possibleGuesses[randomIndex];
