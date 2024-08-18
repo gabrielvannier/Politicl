@@ -2,33 +2,45 @@ import React, { useCallback, useEffect, useState } from "react";
 import GuessList from "./GuessList";
 import Input from "./Input";
 import { Person } from "./types";
-import { load } from "./utils";
+import Confetti from 'react-confetti-boom';
+import { load, selectExpectedPerson } from "./utils";
 
 function Game() {
     const [guesses, setGuesses] = useState<Person[]>([]);
     const [possibleGuessesRecord, setPossibleGuessesRecord] = useState<Record<string, Person>>({});
     const [isLoading, setIsLoading] = useState(true);
     const [expectedPerson, setExpectedPerson] = useState<Person | undefined>();
-    const homeMadeRandom = (seed:number)=> {
-        var x = Math.sin(seed) * 10000;
-        return Math.floor((x - Math.floor(x))*70);
-    }
-    console.log("random = ",homeMadeRandom(3))
-    const selectExpectedPerson = () => {
-        console.log('im called here')
-        const possibleGuesses = Object.values(possibleGuessesRecord);
-        const randomIndex = Math.floor(Math.random() * possibleGuesses.length);
-        return possibleGuesses[randomIndex];
-    }
+    const [isFinished, setIsFinished] = useState(false);
+    const [isWinned, setIsWinned] = useState(false);
 
     useEffect(() => {
         load(setPossibleGuessesRecord, setIsLoading);
     }, []);
     useEffect(() => {
         if (!isLoading && Object.keys(possibleGuessesRecord).length > 0) {
-            setExpectedPerson(selectExpectedPerson());
+            setExpectedPerson(selectExpectedPerson(possibleGuessesRecord));
         }
+        console.log(expectedPerson?.name)
     }, [isLoading, possibleGuessesRecord]);
+
+    const isGameFinished = (guesses: Person[], expectedPerson: Person) => {
+        if (guesses.length === 0) {
+            return false;
+        }
+        if (guesses[guesses.length - 1] === expectedPerson) {
+            setIsWinned(true);
+            console.log("winned")
+            return true;
+        }
+        return guesses.length > 5;
+    }
+    useEffect(() => {
+        setIsFinished(isGameFinished(guesses, expectedPerson!));
+        if (isGameFinished(guesses, expectedPerson!)) {
+            console.log("game finished")
+        }
+    }, [guesses]);
+
     const handleSubmit = (e: React.FormEvent<Element>) => {
         e.preventDefault();
         const guessInput = document.getElementById("guess-input") as HTMLInputElement;
@@ -44,6 +56,7 @@ function Game() {
     }
     return (
         <div className="Game">
+            {isFinished && <Confetti mode={"fall"} particleCount={70} shapeSize={25}/>}
             <Input handleSubmit={handleSubmit} possibleGuessesRecord={possibleGuessesRecord} />
             <GuessList guesses={guesses} expectedPerson={expectedPerson} />
         </div>

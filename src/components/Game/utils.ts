@@ -1,7 +1,22 @@
 import * as Papa from "papaparse";
 import { Person } from "./types";
 
+const homemadeRandom = (seed:number,max_number:number)=> {
+    var x = Math.sin(seed) * 10000;
+    return Math.floor((x - Math.floor(x))*max_number);
+}
 
+const getDaySinceEpoch = () => {
+    const now = new Date();
+    return Math.floor(now.valueOf()/8.64e7);
+}
+export const selectExpectedPerson = (possibleGuessesRecord:Record<string, Person>) => {
+    console.log('im called here')
+    const possibleGuesses = Object.values(possibleGuessesRecord);
+    const seed = getDaySinceEpoch();
+    const randomIndex = homemadeRandom(seed,possibleGuesses.length);
+    return possibleGuesses[randomIndex];
+}
 const parseDate = function (date: string) {
     // date format is "YYYY-MM-DD"
     const dateParts = date.split(" ");
