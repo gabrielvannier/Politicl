@@ -4,6 +4,7 @@ import Input from "./Input";
 import { Person } from "./types";
 import Confetti from 'react-confetti-boom';
 import { load, selectExpectedPerson } from "./utils";
+import { Modal } from '@mui/base/Modal';
 
 function Game() {
     const [guesses, setGuesses] = useState<Person[]>([]);
@@ -56,6 +57,7 @@ function Game() {
     }
     return (
         <div className="Game">
+            {isFinished && <Modal open={true} onClose={()=>{}}><div>Game finished Psartek</div></Modal>}
             {isFinished && <Confetti mode={"fall"} particleCount={70} shapeSize={25}/>}
             <Input handleSubmit={handleSubmit} possibleGuessesRecord={possibleGuessesRecord} />
             <GuessList guesses={guesses} expectedPerson={expectedPerson} />
