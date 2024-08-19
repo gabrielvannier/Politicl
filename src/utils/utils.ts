@@ -8,7 +8,7 @@ const homemadeRandom = (seed:number,max_number:number)=> {
 
 const getDaySinceEpoch = () => {
     const now = new Date();
-    return Math.floor(now.valueOf()/8.64e7);
+    return Math.floor(now.valueOf()/8.64e7 + 3);
 }
 export const selectExpectedPerson = (possibleGuessesRecord:Record<string, Person>) => {
     console.log('im called here')

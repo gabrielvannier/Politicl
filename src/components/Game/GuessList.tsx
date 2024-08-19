@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
-import { Person } from "./types";
-import { MAX_NUMBER_OF_TRY } from "./constants";
+import { Person } from "../../utils/types";
+import { MAX_NUMBER_OF_TRY } from "../../utils/constants";
 import { Cell, ColumnHeadlines } from "./Cell";
 
 

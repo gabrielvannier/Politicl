@@ -1,6 +1,6 @@
 import React, {useState,useEffect} from "react";
-import { partyRightnessScore } from "./constants";
-import { ColulmnName } from "./types";
+import { partyRightnessScore } from "../../utils/constants";
+import { ColulmnName } from "../../utils/types";
 
 const getBirthDateAdvice = (birthdate: number, ecpectedBirthDate: number) => {
     if (birthdate === ecpectedBirthDate) {

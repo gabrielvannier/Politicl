@@ -1,6 +1,6 @@
 import React from "react";
 import { alpha, Autocomplete, TextField } from "@mui/material";
-import { Person } from "./types";
+import { Person } from "../../utils/types";
 
 type InputProps = {
     handleSubmit: (e: React.FormEvent<Element>) => void;

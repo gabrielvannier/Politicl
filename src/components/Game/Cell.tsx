@@ -1,7 +1,7 @@
 import React from "react";
-import { ColulmnName } from "./types";
+import { ColulmnName } from "../../utils/types";
 import { Advice } from "./Advice";
-import {partyRightnessScore, partyTraduction } from "./constants";
+import {partyRightnessScore, partyTraduction } from "../../utils/constants";
 import { color } from "@mui/system";
 import { text } from "stream/consumers";
 type cellProps = {

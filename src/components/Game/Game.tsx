@@ -1,10 +1,11 @@
 import React, { useCallback, useEffect, useState } from "react";
 import GuessList from "./GuessList";
 import Input from "./Input";
-import { Person } from "./types";
+import { Person } from "../../utils/types";
 import Confetti from 'react-confetti-boom';
-import { load, selectExpectedPerson } from "./utils";
-import { Modal } from '@mui/base/Modal';
+import { load, selectExpectedPerson } from "../../utils/utils";
+import { PopUp } from "./PopUp";
+import { winningTitle,winningDescription } from "../../utils/constants";
 
 function Game() {
     const [guesses, setGuesses] = useState<Person[]>([]);
@@ -57,7 +58,7 @@ function Game() {
     }
     return (
         <div className="Game">
-            {isFinished && <Modal open={true} onClose={()=>{}}><div>Game finished Psartek</div></Modal>}
+            {isFinished && <PopUp title={winningTitle} description={winningDescription}/>}
             {isFinished && <Confetti mode={"fall"} particleCount={70} shapeSize={25}/>}
             <Input handleSubmit={handleSubmit} possibleGuessesRecord={possibleGuessesRecord} />
             <GuessList guesses={guesses} expectedPerson={expectedPerson} />

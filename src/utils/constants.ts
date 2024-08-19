@@ -22,6 +22,7 @@ export const partyRightnessScore = {
 
 "Debout la France" : 9,
 "Rassemblement National" : 10,
+"Reconquête" : 10,
 "Les Patriotes" : 10,
 
 }
@@ -33,3 +34,7 @@ export const partyTraduction: Record<ColulmnName, string> = {
     "birthDate":"Date de naissance",
     "party":"Parti politique"
 }
+
+export const winningTitle : string = "🎉🇫🇷 Félicitiations 🇫🇷🎉"
+
+export const winningDescription : string = "Tu as réussi le politicl #213"
