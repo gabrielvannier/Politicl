@@ -1,12 +1,13 @@
 //import react
 import React from 'react';
+import { blue,white,red } from '../utils/constants';
 import logo from '../logo.svg';
 
 function Header() {
     const logo512 = '../logo512.png';
     const headlineStyle = {
         fontSize : "50px",
-        color: "blue",
+        color: blue,
         fontWeight : "bold",
         //contour the text
         WebkitTextStroke: "1px black",
@@ -18,9 +19,9 @@ function Header() {
                 <p className='Game-headline'>
                     <span style = {headlineStyle}>Politicl</span>
                     <span style={
-                        {...headlineStyle, color: "white"}
+                        {...headlineStyle, color: white}
                     }>.</span>
-                    <span style= {{...headlineStyle, color:"red"}}>fr</span>
+                    <span style= {{...headlineStyle, color:red}}>fr</span>
                 </p>
                 <p className='game-instruction'>
                     Devine la personnalité politique du jour :

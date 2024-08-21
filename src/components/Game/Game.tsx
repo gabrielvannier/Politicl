@@ -3,9 +3,10 @@ import GuessList from "./GuessList";
 import Input from "./Input";
 import { Person } from "../../utils/types";
 import Confetti from 'react-confetti-boom';
-import { load, selectExpectedPerson } from "../../utils/utils";
-import { PopUp } from "./PopUp";
-import { winningTitle,winningDescription } from "../../utils/constants";
+import { load, selectExpectedPerson, getDaySincePolitclFirstEdition } from "../../utils/utils";
+import { WinningPopUp, GuidePopUp } from "./PopUp";
+import { confettiColors } from "../../utils/constants";
+
 
 function Game() {
     const [guesses, setGuesses] = useState<Person[]>([]);
@@ -14,6 +15,15 @@ function Game() {
     const [expectedPerson, setExpectedPerson] = useState<Person | undefined>();
     const [isFinished, setIsFinished] = useState(false);
     const [isWinned, setIsWinned] = useState(false);
+    const [showWinningFeature, setShowWinningFeature] = useState(false);
+
+    useEffect(() => {
+        if (isWinned) {
+            setTimeout(() => {
+                setShowWinningFeature(true);
+            }, 4500);
+        }
+    }, [isWinned]);
 
     useEffect(() => {
         load(setPossibleGuessesRecord, setIsLoading);
@@ -58,8 +68,9 @@ function Game() {
     }
     return (
         <div className="Game">
-            {isFinished && <PopUp title={winningTitle} description={winningDescription}/>}
-            {isFinished && <Confetti mode={"fall"} particleCount={70} shapeSize={25}/>}
+            <GuidePopUp/>
+            {showWinningFeature && <WinningPopUp expectedPerson={expectedPerson} dayNumber={getDaySincePolitclFirstEdition()}/>}
+            {showWinningFeature && <Confetti mode={"fall"} particleCount={70} shapeSize={25} colors={confettiColors}/>}
             <Input handleSubmit={handleSubmit} possibleGuessesRecord={possibleGuessesRecord} />
             <GuessList guesses={guesses} expectedPerson={expectedPerson} />
         </div>

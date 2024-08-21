@@ -8,10 +8,13 @@ const homemadeRandom = (seed:number,max_number:number)=> {
 
 const getDaySinceEpoch = () => {
     const now = new Date();
-    return Math.floor(now.valueOf()/8.64e7 + 3);
+    return Math.floor(now.valueOf()/8.64e7);
+}
+export const getDaySincePolitclFirstEdition = () => {
+    const firstEditionDaySinceEpoch = 19955;
+    return getDaySinceEpoch() - firstEditionDaySinceEpoch;
 }
 export const selectExpectedPerson = (possibleGuessesRecord:Record<string, Person>) => {
-    console.log('im called here')
     const possibleGuesses = Object.values(possibleGuessesRecord);
     const seed = getDaySinceEpoch();
     const randomIndex = homemadeRandom(seed,possibleGuesses.length);

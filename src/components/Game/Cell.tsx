@@ -1,9 +1,11 @@
 import React from "react";
 import { ColulmnName } from "../../utils/types";
 import { Advice } from "./Advice";
-import {partyRightnessScore, partyTraduction } from "../../utils/constants";
+import {partyRightnessScore, partyTraduction, confettiColors } from "../../utils/constants";
 import { color } from "@mui/system";
 import { text } from "stream/consumers";
+import Confetti from 'react-confetti-boom';
+
 type cellProps = {
     value: string | number | undefined;
     expectedValue: string | number;
@@ -63,6 +65,7 @@ export function ColumnHeadlines() {
 export function Cell({ value, expectedValue, displayedColumn, displayOrder }: cellProps) {
 
     const [shouldDisplay, setShouldDisplay] = React.useState(false);
+    const [displayConfeti, setDisplayConfeti] = React.useState<boolean | undefined>(undefined);
     React.useEffect(() => {
         if (value === undefined) {
             return;
@@ -93,7 +96,13 @@ export function Cell({ value, expectedValue, displayedColumn, displayOrder }: ce
             color: "#000000",
             opacity: shouldDisplay ? "1" : "0",
         }
+        if (displayedColumn==='name' && displayConfeti === undefined){
+            setDisplayConfeti(true);
+            setTimeout(() => setDisplayConfeti(false), 1000);
+        }
+        
         return <span className="Cell-correct" style={correctStyle}>{value}
+            {displayConfeti && <Confetti mode ={'boom'} effectCount={3} particleCount={160} colors={confettiColors}/>}
             <Advice value={value} expectedValue={expectedValue} displayedColumn={displayedColumn} />
         </span>
     }

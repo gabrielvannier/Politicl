@@ -37,4 +37,18 @@ export const partyTraduction: Record<ColulmnName, string> = {
 
 export const winningTitle : string = "🎉🇫🇷 Félicitiations 🇫🇷🎉"
 
-export const winningDescription : string = "Tu as réussi le politicl #213"
+export const winningDescription : string = "Tu as trouvé le politicl #"
+
+export const guideTitle : string = "📄 Règles"
+
+export const guideDescription : string[] =  [
+"Tu as 6 essais pour deviner la personnalité politique du jour.",
+"Commence par une personnalité au hasard.",
+"Les émoticons te donnent des indications sur la personnalités à deviner",
+"⬆️⬇️ : La personnalité à deviner est plus jeune / plus vieille",
+"⬅️➡️ : La personnalité à deviner est plus à gauche / plus à droite"]
+
+export const blue = "#2b4e7a";
+export const white = "#FFFFFF";
+export const red = "#FF0000";
+export const confettiColors = [blue, white, red];
