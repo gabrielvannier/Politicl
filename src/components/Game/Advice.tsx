@@ -30,7 +30,7 @@ const getPartyAdvice = (party: string, expectedParty: string) => {
     return "⬅️";
 }
 
-const getAdvice = (displayedColumn: ColulmnName, value: string | number, expectedValue: string | number) => {
+export const getAdviceText = (displayedColumn: ColulmnName, value: string | number, expectedValue: string | number) => {
     if (displayedColumn === "birthDate" && typeof value === "number" && typeof expectedValue === "number") {
         return getBirthDateAdvice(value, expectedValue);
     }
@@ -60,7 +60,7 @@ export function Advice({ value, expectedValue, displayedColumn }: adviceProps) {
     }, [ setScale]);
     
 
-    const advice= getAdvice(displayedColumn, value, expectedValue)
+    const advice= getAdviceText(displayedColumn, value, expectedValue)
     if (advice === "") {
         return <span className="Advice-empty"></span>
     }

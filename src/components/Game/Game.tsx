@@ -69,7 +69,7 @@ function Game() {
     return (
         <div className="Game">
             <GuidePopUp/>
-            {showWinningFeature && <WinningPopUp expectedPerson={expectedPerson} dayNumber={getDaySincePolitclFirstEdition()}/>}
+            {showWinningFeature && <WinningPopUp expectedPerson={expectedPerson} guesses={guesses} dayNumber={getDaySincePolitclFirstEdition()}/>}
             {showWinningFeature && <Confetti mode={"fall"} particleCount={70} shapeSize={25} colors={confettiColors}/>}
             <Input handleSubmit={handleSubmit} possibleGuessesRecord={possibleGuessesRecord} />
             <GuessList guesses={guesses} expectedPerson={expectedPerson} />

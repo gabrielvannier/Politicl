@@ -2,14 +2,14 @@ import * as React from 'react';
 import clsx from 'clsx';
 import { styled, css } from '@mui/system';
 import { Modal as BaseModal } from '@mui/base/Modal';
-import { winningTitle, winningDescription, guideTitle, guideDescription,blue } from '../../utils/constants';
+import { winningTitle, winningDescription, guideTitle, guideDescription, blue } from '../../utils/constants';
 import { Person } from '../../utils/types';
 import { Button } from '@mui/material';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
+import { ShareButton } from './ShareButton';
 
 
-
-export function PopUp({ title, description }: { title: React.ReactElement, description: React.ReactElement }) {
+export function PopUp({ title, description, displayStartButton }: { title: React.ReactElement, description: React.ReactElement, displayStartButton: boolean }) {
     const [open, setOpen] = React.useState(true);
     const handleClose = () => setOpen(false);
 
@@ -25,6 +25,9 @@ export function PopUp({ title, description }: { title: React.ReactElement, descr
                 <ModalContent sx={{ width: 400 }}>
                     {title}
                     {description}
+                    <ModalContentDescription style={{ textAlign: 'center' }}>
+                        {displayStartButton && <Button variant="contained" endIcon={<KeyboardArrowRightIcon />} onClick={handleClose} style={{ backgroundColor: blue }} >Commencer</Button>}
+                    </ModalContentDescription>
                 </ModalContent>
             </Modal>
         </div>
@@ -113,25 +116,27 @@ const ModalContentDescription = styled('div')(
 `,
 )
 
-export function WinningPopUp({ expectedPerson, dayNumber }: { expectedPerson: Person, dayNumber: number }) {
+export function WinningPopUp({ expectedPerson, dayNumber, guesses }: { expectedPerson: Person, dayNumber: number, guesses: Person[] }) {
     const winningModalContentTitle =
         <ModalContentTitle>
             {winningTitle}
         </ModalContentTitle>
 
-    const spaceTwoDot = " : ";
     const winningModalContentDescription = <ModalContentDescription>
         <div style={{ textAlign: 'center' }}>
             <div>
                 {winningDescription}
                 {dayNumber}
             </div>
-            <span style={{ color: 'green', fontWeight: 'bold' }}>
+            <div stylega={{ color: 'green', fontWeight: 'bold' }}>
                 {expectedPerson.name}
-            </span>
+            </div>
+            <div style={{marginTop:'20px'}}>
+                <ShareButton expectedPerson={expectedPerson} guesses={guesses} dayNumber={dayNumber} />
+            </div>
         </div>
     </ModalContentDescription>
-    return <PopUp title={winningModalContentTitle} description={winningModalContentDescription} />
+    return <PopUp title={winningModalContentTitle} description={winningModalContentDescription} displayStartButton={false} />
 }
 
 export function GuidePopUp() {
@@ -149,9 +154,6 @@ export function GuidePopUp() {
                 }
             )}
         </ul>
-        <div style={{ textAlign: 'center' }}>
-            <Button variant="contained" endIcon={<KeyboardArrowRightIcon/>} style={{backgroundColor:blue}} >Commencer</Button>
-        </div>
     </ModalContentDescription>
-    return <PopUp title={ContentTitle} description={ContentDescription} />
+    return <PopUp title={ContentTitle} description={ContentDescription} displayStartButton={true} />
 }
