@@ -6,7 +6,7 @@ import { winningTitle, winningDescription, guideTitle, guideDescription, blue } 
 import { Person } from '../../utils/types';
 import { Button } from '@mui/material';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
-import { ShareButton } from './ShareButton';
+import { ShareButton, getResultToShare } from './ShareButton';
 
 
 export function PopUp({ title, description, displayStartButton }: { title: React.ReactElement, description: React.ReactElement, displayStartButton: boolean }) {
@@ -128,8 +128,11 @@ export function WinningPopUp({ expectedPerson, dayNumber, guesses }: { expectedP
                 {winningDescription}
                 {dayNumber}
             </div>
-            <div stylega={{ color: 'green', fontWeight: 'bold' }}>
+            <div style={{ color: 'green', fontWeight: 'bold' }}>
                 {expectedPerson.name}
+            </div>
+            <div style={{whiteSpace:'pre-wrap', fontSize:30,letterSpacing:5,lineHeight:1.15}}>
+                {getResultToShare(guesses, expectedPerson)}
             </div>
             <div style={{marginTop:'20px'}}>
                 <ShareButton expectedPerson={expectedPerson} guesses={guesses} dayNumber={dayNumber} />
