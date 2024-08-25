@@ -5,9 +5,10 @@ import { Person } from "../../utils/types";
 type InputProps = {
     handleSubmit: (e: React.FormEvent<Element>) => void;
     possibleGuessesRecord: Record<string, Person>;
+    isFinished: boolean
 };
 function Input(
-    { handleSubmit, possibleGuessesRecord }: InputProps
+    { handleSubmit, possibleGuessesRecord, isFinished }: InputProps
 ){
     const [key, setKey] = React.useState<number>(0);
     const onSubmit = (e: React.FormEvent<Element>) => {
@@ -19,6 +20,7 @@ function Input(
             <form onSubmit={onSubmit}>
                 <Autocomplete
                     id="guess-input"
+                    disabled={isFinished}
                     options={Object.values(possibleGuessesRecord).map(person => person.name).sort()}
                     autoHighlight={true}
                     renderInput={(params) => <TextField {...params} label="Rechercher" />}

@@ -4,7 +4,6 @@
 
 .App-logo {
   height: 20vmin;
-  pointer-events: none;
 }
 
 
@@ -15,14 +14,6 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   margin-top : 20px;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-.Game-headline {
-  color: black;
 }
 
 .Input-guess {

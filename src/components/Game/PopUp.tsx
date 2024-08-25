@@ -2,14 +2,14 @@ import * as React from 'react';
 import clsx from 'clsx';
 import { styled, css } from '@mui/system';
 import { Modal as BaseModal } from '@mui/base/Modal';
-import { winningTitle, winningDescription, guideTitle, guideDescription, blue } from '../../utils/constants';
+import { winningTitle, winningDescription, failedTitle, failedDescription, guideTitle, guideDescription, blue } from '../../utils/constants';
 import { Person } from '../../utils/types';
 import { Button } from '@mui/material';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import { ShareButton, getResultToShare } from './ShareButton';
 
 
-export function PopUp({ title, description, displayStartButton }: { title: React.ReactElement, description: React.ReactElement, displayStartButton: boolean }) {
+export function PopUp({ title, description, displayStartButton, allowedToClose }: { title: React.ReactElement, description: React.ReactElement, displayStartButton: boolean ,allowedToClose : boolean }) {
     const [open, setOpen] = React.useState(true);
     const handleClose = () => setOpen(false);
 
@@ -19,7 +19,7 @@ export function PopUp({ title, description, displayStartButton }: { title: React
                 aria-labelledby="unstyled-modal-title"
                 aria-describedby="unstyled-modal-description"
                 open={open}
-                onClose={handleClose}
+                onClose={allowedToClose? handleClose : ()=>{}}
                 slots={{ backdrop: StyledBackdrop }}
             >
                 <ModalContent sx={{ width: 400 }}>
@@ -116,30 +116,30 @@ const ModalContentDescription = styled('div')(
 `,
 )
 
-export function WinningPopUp({ expectedPerson, dayNumber, guesses }: { expectedPerson: Person, dayNumber: number, guesses: Person[] }) {
-    const winningModalContentTitle =
+export function FinishedPopUp({ isWinned, expectedPerson, dayNumber, guesses }: { isWinned: boolean, expectedPerson: Person, dayNumber: number, guesses: Person[] }) {
+    const contentTitle =
         <ModalContentTitle>
-            {winningTitle}
+            {isWinned? winningTitle : failedTitle}
         </ModalContentTitle>
 
-    const winningModalContentDescription = <ModalContentDescription>
+    const contentDescription = <ModalContentDescription>
         <div style={{ textAlign: 'center' }}>
             <div>
-                {winningDescription}
+                {isWinned ? winningDescription : failedDescription}
                 {dayNumber}
             </div>
-            <div style={{ color: 'green', fontWeight: 'bold' }}>
+            <div style={{ color: isWinned?'green' : 'red', fontWeight: 'bold' }}>
                 {expectedPerson.name}
             </div>
-            <div style={{whiteSpace:'pre-wrap', fontSize:30,letterSpacing:5,lineHeight:1.15}}>
+            <div style={{ whiteSpace: 'pre-wrap', fontSize: 30, letterSpacing: 5, lineHeight: 1.15 }}>
                 {getResultToShare(guesses, expectedPerson)}
             </div>
-            <div style={{marginTop:'20px'}}>
+            <div style={{ marginTop: '20px' }}>
                 <ShareButton expectedPerson={expectedPerson} guesses={guesses} dayNumber={dayNumber} />
             </div>
         </div>
     </ModalContentDescription>
-    return <PopUp title={winningModalContentTitle} description={winningModalContentDescription} displayStartButton={false} />
+    return <PopUp title={contentTitle} description={contentDescription} displayStartButton={false} allowedToClose={false}/>
 }
 
 export function GuidePopUp() {
@@ -153,10 +153,10 @@ export function GuidePopUp() {
         <ul>
             {guideDescription.map(
                 (value, index, array) => {
-                    return <li key={index}>{value}</li>
+                    return <li style={{ marginTop: "25px", lineHeight: 1.1 }} key={index}>{value}</li>
                 }
             )}
         </ul>
     </ModalContentDescription>
-    return <PopUp title={ContentTitle} description={ContentDescription} displayStartButton={true} />
+    return <PopUp title={ContentTitle} description={ContentDescription} displayStartButton={true} allowedToClose={true}/>
 }
