@@ -9,13 +9,30 @@ import { confettiColors } from "../../utils/constants";
 
 
 function Game() {
-    const [guesses, setGuesses] = useState<Person[]>([]);
+    const [guesses, setGuesses] = useState<Person[]>(localStorage.getItem("guesses") ? JSON.parse(localStorage.getItem("guesses")!) : []);
     const [possibleGuessesRecord, setPossibleGuessesRecord] = useState<Record<string, Person>>({});
     const [isLoading, setIsLoading] = useState(true);
     const [expectedPerson, setExpectedPerson] = useState<Person | undefined>();
     const [isFinished, setIsFinished] = useState(false);
     const [isWinned, setIsWinned] = useState(false);
     const [showEndFeatures, setShowEndFeatures] = useState(false);
+    const hasSeenGuide = localStorage.getItem("hasSeenGuide") === "true";
+    const [storedDayNumber, setStoredDayNumber] = useState(localStorage.getItem("dayNumber") ? JSON.parse(localStorage.getItem("dayNumber")!) : 0);
+
+    //clear the localStorage when the stored day number is different from the current day number
+    useEffect(() => {
+        console.log("bite")
+        console.log(storedDayNumber)
+        console.log(getDaySincePolitclFirstEdition())
+        localStorage.setItem("dayNumber", JSON.stringify(storedDayNumber));
+        if (storedDayNumber !== getDaySincePolitclFirstEdition()) {
+            console.log("bite2")
+            localStorage.setItem("guesses", JSON.stringify([]));
+            setGuesses([]);
+            setStoredDayNumber(getDaySincePolitclFirstEdition());
+        }
+    }, [storedDayNumber]);
+
 
     useEffect(() => {
         if (isFinished) {
@@ -37,6 +54,8 @@ function Game() {
     }, [isLoading, possibleGuessesRecord]);
 
     useEffect(() => {
+        //populate the localStorage
+        localStorage.setItem("guesses", JSON.stringify(guesses));
         setIsFinished(isGameFinished(guesses, expectedPerson!));
         setIsWinned(isGameWinned(guesses,expectedPerson!))
     }, [guesses]);
@@ -66,7 +85,7 @@ function Game() {
     }
     return (
         <div className="Game">
-            <GuidePopUp />
+            {!hasSeenGuide && <GuidePopUp />}
             {showEndFeatures && <FinishedPopUp isWinned={isWinned} expectedPerson={expectedPerson} guesses={guesses} dayNumber={getDaySincePolitclFirstEdition()} />}
             {showEndFeatures && isWinned && <Confetti mode={"fall"} particleCount={70} shapeSize={25} colors={confettiColors} />}
             <Input handleSubmit={handleSubmit} possibleGuessesRecord={possibleGuessesRecord} isFinished={isFinished} />

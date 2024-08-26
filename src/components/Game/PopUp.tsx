@@ -12,6 +12,10 @@ import { ShareButton, getResultToShare } from './ShareButton';
 export function PopUp({ title, description, displayStartButton, allowedToClose }: { title: React.ReactElement, description: React.ReactElement, displayStartButton: boolean ,allowedToClose : boolean }) {
     const [open, setOpen] = React.useState(true);
     const handleClose = () => setOpen(false);
+    const handleCloseAndDisableGuide = () => {
+        setOpen(false);
+        localStorage.setItem("hasSeenGuide", "true");
+    }
 
     return (
         <div>
@@ -26,7 +30,7 @@ export function PopUp({ title, description, displayStartButton, allowedToClose }
                     {title}
                     {description}
                     <ModalContentDescription style={{ textAlign: 'center' }}>
-                        {displayStartButton && <Button variant="contained" endIcon={<KeyboardArrowRightIcon />} onClick={handleClose} style={{ backgroundColor: blue }} >Commencer</Button>}
+                        {displayStartButton && <Button variant="contained" endIcon={<KeyboardArrowRightIcon />} onClick={handleCloseAndDisableGuide} style={{ backgroundColor: blue }} >Commencer</Button>}
                     </ModalContentDescription>
                 </ModalContent>
             </Modal>
