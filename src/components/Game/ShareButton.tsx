@@ -4,7 +4,6 @@ import { getAdviceText } from "./Advice";
 import { Button } from "@mui/material";
 import { ContentPaste } from "@mui/icons-material";
 import { blue } from "../../utils/constants";
-import { get } from "jquery";
 
 const getGuessResults = (guess: Person, expectedPerson: Person) => {
     const results = [
@@ -37,25 +36,25 @@ export const getResultToShare = (guesses: Person[], expectedPerson: Person) => {
 }
 
 const getTextToShare = (guesses: Person[], expectedPerson: Person, dayNumber: number) => {
-    const textToShareIntro = `Politicl #${dayNumber}  -  #${guesses.length}/6 \n`
+    const textToShareIntro = `🇫🇷 Politicl #${dayNumber}  -  #${guesses.length}/6 \n`
     const resultToShare = getResultToShare(guesses, expectedPerson);
-    const textOutro = '\n  \n https://www.politicl.fr/'
+    const textOutro = '\n\nhttps://www.politicl.fr/'
     return textToShareIntro + resultToShare + textOutro;
 }
 
 export function ShareButton({ expectedPerson, guesses, dayNumber }: { expectedPerson: Person, guesses: Person[], dayNumber: number }) {
     const [copied, setCopied] = useState(false);
-    const [testToCopy, setTestToCopy] = useState("");
+    const [textToCopy, setTextToCopy] = useState("");
 
     const copyToClipboard = () => {
-        navigator.clipboard.writeText(testToCopy);
+        navigator.clipboard.writeText(textToCopy);
         setCopied(true);
         setTimeout(() => setCopied(false), 2000);
     }
 
     useEffect(() => {
-        setTestToCopy(getTextToShare(guesses, expectedPerson, dayNumber));
-    }, [])
+        setTextToCopy(getTextToShare(guesses, expectedPerson, dayNumber));
+    }, [guesses, expectedPerson, dayNumber])
     return (
         <Button variant="contained" endIcon={<ContentPaste />} onClick={copyToClipboard} style={{ backgroundColor: blue }} >{copied ? "Lien copié" : "Partager"}</Button>
 

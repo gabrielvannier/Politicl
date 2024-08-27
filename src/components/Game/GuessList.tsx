@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Person } from "../../utils/types";
 import { MAX_NUMBER_OF_TRY } from "../../utils/constants";
 import { Cell, ColumnHeadlines } from "./Cell";

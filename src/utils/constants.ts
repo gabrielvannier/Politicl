@@ -41,7 +41,7 @@ export const winningDescription: string = "Tu as trouvé le politicl #"
 
 export const failedTitle: string = "😢 Dommage 😢"
 
-export const failedDescription: string = "Il s'agisait du politcl #"
+export const failedDescription: string = "Il s'agissait du politcl #"
 
 export const guideTitle: string = "📄 Règles"
 

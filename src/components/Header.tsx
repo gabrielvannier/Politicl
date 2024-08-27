@@ -1,7 +1,6 @@
 //import react
 import React from 'react';
 import { blue,white,red } from '../utils/constants';
-import logo from '../logo.svg';
 
 function Header() {
     const logo512 = '../logo512.png';

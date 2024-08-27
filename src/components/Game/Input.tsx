@@ -1,5 +1,5 @@
 import React from "react";
-import { alpha, Autocomplete, TextField } from "@mui/material";
+import { Autocomplete, TextField } from "@mui/material";
 import { Person } from "../../utils/types";
 
 type InputProps = {

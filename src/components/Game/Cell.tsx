@@ -2,8 +2,6 @@ import React from "react";
 import { ColulmnName } from "../../utils/types";
 import { Advice } from "./Advice";
 import {partyRightnessScore, partyTraduction, confettiColors } from "../../utils/constants";
-import { color } from "@mui/system";
-import { text } from "stream/consumers";
 import Confetti from 'react-confetti-boom';
 
 type cellProps = {
@@ -71,7 +69,7 @@ export function Cell({ value, expectedValue, displayedColumn, displayOrder }: ce
             return;
         }
         setTimeout(() => setShouldDisplay(true), 700 * displayOrder - 650);
-    }, [value]);
+    }, [value,displayOrder]);
 
     const defaultStyle = {
         ...communDefaultStyle,

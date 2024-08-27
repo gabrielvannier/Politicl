@@ -21,12 +21,8 @@ function Game() {
 
     //clear the localStorage when the stored day number is different from the current day number
     useEffect(() => {
-        console.log("bite")
-        console.log(storedDayNumber)
-        console.log(getDaySincePolitclFirstEdition())
         localStorage.setItem("dayNumber", JSON.stringify(storedDayNumber));
         if (storedDayNumber !== getDaySincePolitclFirstEdition()) {
-            console.log("bite2")
             localStorage.setItem("guesses", JSON.stringify([]));
             setGuesses([]);
             setStoredDayNumber(getDaySincePolitclFirstEdition());
@@ -50,7 +46,6 @@ function Game() {
         if (!isLoading && Object.keys(possibleGuessesRecord).length > 0) {
             setExpectedPerson(selectExpectedPerson(possibleGuessesRecord));
         }
-        console.log(expectedPerson?.name)
     }, [isLoading, possibleGuessesRecord]);
 
     useEffect(() => {
@@ -58,7 +53,7 @@ function Game() {
         localStorage.setItem("guesses", JSON.stringify(guesses));
         setIsFinished(isGameFinished(guesses, expectedPerson!));
         setIsWinned(isGameWinned(guesses,expectedPerson!))
-    }, [guesses]);
+    }, [guesses,expectedPerson]);
 
     const isGameWinned = (guesses: Person[], expectedPerson: Person) => {
         if (guesses.length===0){
