@@ -25,13 +25,11 @@ const graphicalySimplifyResult = (char:string) =>{
 
 export const getResultToShare = (guesses: Person[], expectedPerson: Person) => {
     const guessesResults = getGuessesResults(guesses, expectedPerson);
-    console.log(guessesResults)
     const textToShare = guessesResults.map((guessResults, index) => {
         return "\n" + guessResults.map((result, index) => {
             return graphicalySimplifyResult(result)
         }).join("")
     }).join("")
-    console.log(textToShare)
     return textToShare;
 }
 
