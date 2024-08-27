@@ -39,7 +39,7 @@ export const getResultToShare = (guesses: Person[], expectedPerson: Person) => {
 const getTextToShare = (guesses: Person[], expectedPerson: Person, dayNumber: number) => {
     const textToShareIntro = `Politicl #${dayNumber}  -  #${guesses.length}/6 \n`
     const resultToShare = getResultToShare(guesses, expectedPerson);
-    const textOutro = '\n  \n https://politicl.fr'
+    const textOutro = '\n  \n https://www.politicl.fr/'
     return textToShareIntro + resultToShare + textOutro;
 }
 
