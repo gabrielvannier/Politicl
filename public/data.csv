@@ -1,39 +1,75 @@
-Charles de Gaulle,1890-11-22,1970-11-09,Union pour la Nouvelle République,Président,M
-Georges Pompidou,1911-07-05,1974-04-02,Union des Démocrates pour la République,Président,M
-Valéry Giscard d'Estaing,1926-02-02,2020-12-02,Union pour la Démocratie Française,Président,M
-François Mitterrand,1916-10-26,1996-01-08,Parti Socialiste,Président,M
-Jacques Chirac,1932-11-29,2019-09-26,Rassemblement pour la République,Président,M
-Nicolas Sarkozy,1955-01-28,,Union pour un Mouvement Populaire,Président,M
-François Hollande,1954-08-12,,Parti Socialiste,Président,M
-Emmanuel Macron,1977-12-21,,Renaissance,Président,M
-Michel Debré,1912-01-15,1996-08-02,Union pour la Nouvelle République,Premier ministre,M
-Georges Pompidou,1911-07-05,1974-04-02,Union pour la Nouvelle République,Premier ministre,M
-Maurice Couve de Murville,1907-01-24,1999-12-24,Union pour la Défense de la République,Premier ministre,M
-Jacques Chaban-Delmas,1915-03-07,2000-11-10,Union pour la Défense de la République,Premier ministre,M
-Pierre Messmer,1916-03-20,2007-08-29,Union pour la Défense de la République,Premier ministre,M
-Raymond Barre,1924-04-12,2007-08-25,Union pour la Démocratie Française,Premier ministre,M
-Laurent Fabius,1946-08-20,,Parti Socialiste,Premier ministre,M
-Édith Cresson,1934-01-27,,Parti Socialiste,Premier ministre,F
-Pierre Bérégovoy,1925-12-23,1993-05-01,Parti Socialiste,Premier ministre,M
-Édouard Balladur,1929-05-02,,Rassemblement pour la République,Premier ministre,M
-Alain Juppé,1945-08-15,,Rassemblement pour la République,Premier ministre,M
-Lionel Jospin,1937-07-12,,Parti Socialiste,Premier ministre,M
-Jean-Pierre Raffarin,1948-08-03,,Union pour un Mouvement Populaire,Premier ministre,M
-Dominique de Villepin,1953-11-14,,Union pour un Mouvement Populaire,Premier ministre,M
-François Fillon,1954-03-04,,Union pour un Mouvement Populaire,Premier ministre,M
-Jean-Marc Ayrault,1950-01-25,,Parti Socialiste,Premier ministre,M
-Manuel Valls,1962-08-13,,Parti Socialiste,Premier ministre,M
-Bernard Cazeneuve,1963-06-02,,Parti Socialiste,Premier ministre,M
-Édouard Philippe,1970-11-28,,Renaissance,Premier ministre,M
-Jean Castex,1965-06-25,,Renaissance,Premier ministre,M
-Élisabeth Borne,1961-04-18,,Renaissance,Premier ministre,F
-Jean-Luc Mélenchon,1951-08-19,,La France Insoumise,Chef de parti,M
-Marine Le Pen,1968-08-05,,Rassemblement National,Chef de parti,F
-Olivier Faure,1968-08-18,,Parti Socialiste,Chef de parti,M
-Christian Jacob,1959-12-04,,Les Républicains,Chef de parti,M
-Stanislas Guerini,1982-05-14,,Renaissance,Chef de parti,M
-Jordan Bardella,1995-09-13,,Rassemblement National,Chef de parti,M
-Fabien Roussel,1969-04-16,,Parti Communiste Français,Chef de parti,M
-Nicolas Dupont-Aignan,1961-03-07,,Debout la France,Chef de parti,M
-Florian Philippot,1981-10-24,,Les Patriotes,Chef de parti,M
-Yannick Jadot,1967-07-27,,Europe Écologie Les Verts,Chef de parti,M
+Charles de Gaulle,H,22 novembre 1890,Union pour la Nouvelle République,Président
+Georges Pompidou,H,5 juillet 1911,Union des Démocrates pour la République,Président
+Valéry Giscard d'Estaing,H,2 février 1926,Républicains Indépendants,Président
+François Mitterrand,H,26 octobre 1916,Parti Socialiste,Président
+Jacques Chirac,H,29 novembre 1932,Rassemblement pour la République,Président
+Nicolas Sarkozy,H,28 janvier 1955,Union pour un Mouvement Populaire,Président
+François Hollande,H,12 août 1954,Parti Socialiste,Président
+Emmanuel Macron,H,21 décembre 1977,Renaissance,Président
+Michel Debré,H,15 janvier 1912,Union pour la Nouvelle République,Premier ministre
+Jacques Chaban-Delmas,H,15 mars 1915,Union des Démocrates pour la République,Premier ministre
+Pierre Messmer,H,20 mars 1916,Union des Démocrates pour la République,Premier ministre
+Raymond Barre,H,12 avril 1924,Union des Démocrates pour la République,Premier ministre
+Pierre Mauroy,H,5 juillet 1928,Parti Socialiste,Premier ministre
+Laurent Fabius,H,20 août 1946,Parti Socialiste,Premier ministre
+Michel Rocard,H,23 août 1930,Parti Socialiste,Premier ministre
+Édith Cresson,H,27 janvier 1934,Parti Socialiste,Premier ministre
+Pierre Bérégovoy,H,23 décembre 1925,Parti Socialiste,Premier ministre
+Édouard Balladur,H,2 mai 1929,Rassemblement pour la République,Premier ministre
+Alain Juppé,H,15 août 1945,Rassemblement pour la République,Premier ministre
+Lionel Jospin,H,12 juillet 1937,Parti Socialiste,Premier ministre
+Jean-Pierre Raffarin,H,3 août 1948,Union pour un Mouvement Populaire,Premier ministre
+Dominique de Villepin,H,14 novembre 1953,Union pour un Mouvement Populaire,Premier ministre
+François Fillon,H,4 mars 1954,Union pour un Mouvement Populaire,Premier ministre
+Jean-Marc Ayrault,H,25 janvier 1950,Parti Socialiste,Premier ministre
+Manuel Valls,H,13 août 1962,Parti Socialiste,Premier ministre
+Bernard Cazeneuve,H,2 juin 1963,Parti Socialiste,Premier ministre
+Édouard Philippe,H,28 novembre 1970,Les Républicains,Premier ministre
+Jean Castex,H,25 juin 1965,Les Républicains,Premier ministre
+Élisabeth Borne,F,18 avril 1961,Renaissance,Premier ministre
+Gabriel Attal,H,16 mars 1989,Renaissance,Premier ministre
+Simone Veil,F,13 juillet 1927,Union pour la Démocratie Française,Ministre
+Jacques Delors,H,20 juillet 1925,Parti Socialiste,Ministre
+Robert Schuman,H,29 juin 1886,Mouvement Républicain Populaire,Ministre
+Michel Rocard,H,23 août 1930,Parti Socialiste,Ministre
+Jean-Pierre Chevènement,H,9 mars 1939,Mouvement des Citoyens,Ministre
+Raymond Barre,H,12 avril 1924,Union des Démocrates pour la République,Ministre
+Dominique Strauss-Kahn,H,25 avril 1949,Parti Socialiste,Ministre
+Alain Juppé,H,15 août 1945,Rassemblement pour la République,Ministre
+François Bayrou,H,25 mai 1951,Union pour la Démocratie Française,Ministre
+Laurent Fabius,H,20 août 1946,Parti Socialiste,Ministre
+Ségolène Royal,F,22 septembre 1943,Parti Socialiste,Ministre
+Jean François Copé,H,5 mai 1964,Les Républicains,Ministre
+Najat Vallaud-BelkaceH,F,4 octobre 1977,Parti Socialiste,Ministre
+Christiane Taubira,F,2 février 1952,Parti Socialiste,Ministre
+Olivier Véran,H,22 avril 1980,Renaissance,Ministre
+Gérald Darmanin,H,11 octobre 1982,Renaissance,Ministre
+Marlène Schiappa,F,18 novembre 1982,Renaissance,Ministre
+Éric Dupond-Moretti,H,20 avril 1961,Renaissance,Ministre
+Roselyne Bachelot,F,24 décembre 1946,Les Républicains,Ministre
+Rachida Dati,F,27 novembre 1965,Renaissance,Ministre
+Amélie Oudéa-Castéra,F,6 janvier 1978,Renaissance,Ministre
+Myriam El Khomri,F,22 février 1978,Parti Socialiste,Ministre
+Aurore Bergé,F,13 février 1986,Renaissance,Ministre
+Jean-Luc Mélenchon,H,19 août 1951,La France Insoumise,Chef de parti
+Marine Le Pen,F,5 août 1968,Rassemblement National,Chef de parti
+Nicolas Dupont-Aignan,H,7 mars 1961,Debout la France,Chef de parti
+Florian Philippot,H,24 octobre 1981,Les Patriotes,Chef de parti
+Yannick Jadot,H,27 juillet 1967,Europe Écologie Les Verts,Chef de parti
+Stanislas Guerini,H,14 mai 1982,Renaissance,Chef de parti
+Jordan Bardella,H,13 septembre 1995,Rassemblement National,Chef de parti
+Fabien Roussel,H,16 avril 1969,Parti Communiste Français,Chef de parti
+Laurent Wauquiez,H,12 avril 1975,Les Républicains,Chef de parti
+Eric Ciotti,H,28 septembre 1965,Les Républicains,Chef de parti
+Eric Zemmour,H,31 août 1958,Reconquête,Chef de parti
+Louis Boyard,H,26 aout 2000,La France Insoumise,Député
+Sandrine Rousseau,F,25 janvier 1972,Europe Écologie Les Verts,Député
+Mathilde Panot,F,15 janvier 1989,La France Insoumise,Député
+Yaël Braun-Pivet,F,7 Décembre 1970,Renaissance,Député
+Clémence Guetté,F,15 Mars 1991,La France Insoumise,Député
+Olivier Faure,H,18 août 1968,Parti Socialiste,Député
+Manon Aubry,F,22 juillet 1989,La France Insoumise,Député
+Clémentine Autain,F,26 Mai 1973,La France Insoumise,Député
+François Ruffin,H,18 octobre 1975,La France Insoumise,Député
+Alexis Corbière,H,17 août 1968,La France Insoumise,Député
+Marion Maréchal Le Pen,F,10 décembre 1989,Rassemblement National,Député

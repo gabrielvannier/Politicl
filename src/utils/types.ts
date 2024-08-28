@@ -5,7 +5,7 @@ export type Person = {
     deathDate: number | null;
     party: string;
     highestRole: string;
-    sexe: string; //M or F
+    sexe: string; //H or F
 };
 
 export type ColulmnName = "name" | "sexe" | "highestRole" | "birthDate" | "party";
