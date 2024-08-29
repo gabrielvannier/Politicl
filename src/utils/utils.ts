@@ -1,5 +1,13 @@
 import * as Papa from "papaparse";
 import { Person } from "./types";
+import { useMediaQuery } from "@mui/material";
+
+
+export function useIsMobile() {
+    const mobileQuery = '(max-width: 1175px)';
+    return useMediaQuery(mobileQuery);
+}
+
 
 const homemadeRandom = (seed:number,max_number:number)=> {
     var x = Math.sin(seed) * 10000;

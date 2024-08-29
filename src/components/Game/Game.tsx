@@ -80,6 +80,7 @@ function Game() {
     }
     return (
         <div className="Game">
+            {guesses.length === 0 && <div className="Start-advice">Tape n'importe quelle personne pour commencer</div>}
             {!hasSeenGuide && <GuidePopUp />}
             {showEndFeatures && <FinishedPopUp isWinned={isWinned} expectedPerson={expectedPerson} guesses={guesses} dayNumber={getDaySincePolitclFirstEdition()} />}
             {showEndFeatures && isWinned && <Confetti mode={"fall"} particleCount={70} shapeSize={25} colors={confettiColors} />}

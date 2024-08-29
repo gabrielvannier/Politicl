@@ -16,11 +16,18 @@
   margin-top : 20px;
 }
 
+.Start-advice {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: grey;
+}
+
 .Input-guess {
   width: 50%;
   height: 30px;
   margin-left: auto;
   margin-right: auto;
+  display:block;
 }
 .Guesses {
   margin-top: 50px;

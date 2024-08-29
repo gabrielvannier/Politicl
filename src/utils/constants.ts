@@ -1,4 +1,5 @@
 import { ColulmnName } from "./types";
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 export const MAX_NUMBER_OF_TRY = 6;
 

@@ -4,7 +4,7 @@ import Header from './components/Header';
 import Game from './components/Game/Game';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from "@vercel/speed-insights/react"
-import useMediaQuery from '@mui/material/useMediaQuery';
+import { useIsMobile } from './utils/utils';
 
 
 function SizeUnavailable() {
@@ -19,14 +19,14 @@ function SizeUnavailable() {
   )
 }
 function App() {
-  const isLargeEnough = useMediaQuery('(min-width:1175px)');
-
+  //const isLargeEnough = useMediaQuery('(min-width:1175px)');
+  const isMobile = useIsMobile();
   return (
     <div className="App">
       <Analytics />
       <SpeedInsights />
-      {isLargeEnough && <Header />}
-      {isLargeEnough ? <Game /> : <SizeUnavailable />}
+      {!isMobile && <Header />}
+      {!isMobile ? <Game /> : <SizeUnavailable />}
     </div>
   );
 }
