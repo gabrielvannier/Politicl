@@ -26,7 +26,7 @@ export function PopUp({ title, description, displayStartButton, allowedToClose }
                 onClose={allowedToClose? handleClose : ()=>{}}
                 slots={{ backdrop: StyledBackdrop }}
             >
-                <ModalContent sx={{ width: 400 }}>
+                <ModalContent style={{width:'clamp(200px,70%,400px)'}}>
                     {title}
                     {description}
                     <ModalContentDescription style={{ textAlign: 'center' }}>

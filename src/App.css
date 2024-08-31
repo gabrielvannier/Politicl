@@ -17,26 +17,20 @@
 }
 
 .Start-advice {
-  font-size: 20px;
+  font-size: calc(5px + 1.5vmin);
   margin-bottom: 20px;
   color: grey;
 }
 
 .Input-guess {
   width: 50%;
+  min-width: 220px;
   height: 30px;
   margin-left: auto;
   margin-right: auto;
-  display:block;
-}
-.Guesses {
-  margin-top: 50px;
-  margin-bottom: 20px;
 }
 .Cell-advice {
   font-size: 30px;
-  margin-left: 10px;
-  vertical-align: middle;
 }
 .Advice {
   transition-property: transform;

@@ -28,28 +28,13 @@ function Input(
         handleSubmit(e);
         setKey(key + 1);
     }
-    const inputTextStyle: React.CSSProperties = {
-        marginRight: "65px",
-    };
-    const buttonDivStyle: React.CSSProperties = {
-        width: "55px",
-        float: "right",
-    };
     const buttonStyle: React.CSSProperties = {
-        minWidth: buttonDivStyle.width,
-        minHeight: buttonDivStyle.width,
+        minWidth: "55px",
+        minHeight: "55px",
     };
     return (
         <div className="Input-guess">
-            <form onSubmit={onSubmit}>
-                <div style={buttonDivStyle}>
-                    <Tooltip title="Valider">
-                        <Button type="submit" variant="contained" style={{ ...buttonStyle, backgroundColor: enableButton ? blue : "" }} disabled={!enableButton}>
-                            <HowToVote />
-                        </Button>
-                    </Tooltip>
-                </div>
-                <div style={inputTextStyle}>
+            <form onSubmit={onSubmit} style={{flexGrow:1,display:"flex",gap:"1em"}}>
                     <Autocomplete
                         id="guess-input"
                         disabled={isFinished}
@@ -61,8 +46,15 @@ function Input(
                         key={key} // This is the key to re-render the component
                         clearOnBlur={true}
                         selectOnFocus={true}
+                        style={{flexGrow:1}}
                     />
-                </div>
+                    <Tooltip title="Valider">
+                        <span>
+                        <Button type="submit" variant="contained" style={{ ...buttonStyle, backgroundColor: enableButton ? blue : "" }} disabled={!enableButton}>
+                            <HowToVote />
+                        </Button>
+                        </span>
+                    </Tooltip>
             </form>
         </div>
     );

@@ -52,6 +52,7 @@
   },
   "devDependencies": {
     "@types/jquery": "^3.5.30",
-    "@types/papaparse": "^5.3.14"
+    "@types/papaparse": "^5.3.14",
+    "prettier": "3.3.3"
   }
 }

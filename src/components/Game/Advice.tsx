@@ -1,6 +1,7 @@
 import React, {useState,useEffect} from "react";
 import { partyRightnessScore } from "../../utils/constants";
 import { ColulmnName } from "../../utils/types";
+import { useIsMobile } from "../../utils/utils";
 
 const getBirthDateAdvice = (birthdate: number, ecpectedBirthDate: number) => {
     if (birthdate === ecpectedBirthDate) {
@@ -50,6 +51,7 @@ type adviceProps = {
 }
 export function Advice({ value, expectedValue, displayedColumn }: adviceProps) {
 
+    const isMobile = useIsMobile();
     const [scale, setScale] = useState(2);
     useEffect(() => {
         //setScale(2);
@@ -65,7 +67,7 @@ export function Advice({ value, expectedValue, displayedColumn }: adviceProps) {
         return <span className="Advice-empty"></span>
     }
 
-    const style = {
+    const desktopStyle = {
         transform: `scale(${scale})`,
         display: "inline-block",
         marginLeft: "10px",
@@ -73,5 +75,11 @@ export function Advice({ value, expectedValue, displayedColumn }: adviceProps) {
         verticalAlign: "middle",
       };
 
-    return <span className="Advice" style={style}>{advice}</span>
+    const mobileStyle: React.CSSProperties = {
+      transform: `scale(${scale})`,
+      display: "block",
+      fontSize: "20px",
+    };
+
+    return <span className="Advice" style={isMobile? mobileStyle : desktopStyle}>{advice}</span>
 }
