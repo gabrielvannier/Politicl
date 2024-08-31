@@ -18,7 +18,7 @@ type cellProps = {
 const communDefaultStyle = {
   border: "1px solid black",
   borderRadius: "10px",
-  fontSize: "calc(1vw + 7px)",
+  fontSize: "calc(1vw + 8px)",
   display: "flex",
 };
 const columnStyle = {

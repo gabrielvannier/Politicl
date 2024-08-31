@@ -48,7 +48,6 @@ export const guideTitle: string = "📄 Règles"
 
 export const guideDescription: string[] = [
     "Tu as 6 essais pour deviner la personnalité politique du jour.",
-    "Commence par une personne au hasard.",
     "Les émoticons te donnent des indications sur la personne à deviner",
     "⬆️⬇️ : La personne à deviner est plus jeune / plus vieille",
     "⬅️➡️ : La personne à deviner est plus à gauche / plus à droite"]
