@@ -40,20 +40,36 @@ const columnStyle = {
 };
 
 function ColumnHeadline({ displayedColumn }: { displayedColumn: ColulmnName }) {
-  const defaultStyle = {
+    const isMobile = useIsMobile();
+    const defaultStyle = {
     ...columnStyle[displayedColumn],
     lineHeight: "15px",
-    display: "inline-block",
-    fontSize: "16px",
+    fontSize: "calc(1vw + 4px)"
+    //fontSize: "16px",
     //border: "1px solid black",
     //margin: "5px",
   };
-  return <p style={defaultStyle}>{partyTraduction[displayedColumn]} :</p>;
+  // artificialy augment the size of the birthDate column
+  if (displayedColumn === "birthDate" && isMobile) {
+    defaultStyle.width = "12%";
+  }
+  return <span style={defaultStyle}>{partyTraduction[displayedColumn]} :</span>;
 }
 
 export function ColumnHeadlines() {
   return (
-    <div className="Column-headlines">
+    <div
+      className="Column-headlines"
+      style={{
+        display: "flex",
+        gap: "1%",
+        maxWidth: "1200px",
+        width: "97%",
+        justifyContent: "space-evenly",
+        margin: "1vw",
+        alignItems: "center",
+      }}
+    >
       <ColumnHeadline displayedColumn="sexe" />
       <ColumnHeadline displayedColumn="highestRole" />
       <ColumnHeadline displayedColumn="party" />

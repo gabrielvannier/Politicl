@@ -20,6 +20,7 @@ function Guess({
         width: "97%",
         justifyContent: "space-evenly",
         margin: "1vw",
+        color: "grey"
       }}
     >
       <Cell
@@ -77,7 +78,7 @@ function GuessList({
           alignItems: "center",
         }}
       >
-        {false && <ColumnHeadlines />}
+        <ColumnHeadlines/>
         {Array.from({ length: MAX_NUMBER_OF_TRY }).map((_, index) => {
           var guess = undefined;
           if (index < guesses.length) {
