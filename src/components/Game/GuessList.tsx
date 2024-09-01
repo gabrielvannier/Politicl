@@ -68,7 +68,7 @@ function GuessList({
     return <div />;
   }
   return (
-    <div className="Guesses" style={{ marginTop: "50px", height: "50%" }}>
+    <div className="Guesses" style={{ marginTop: "50px", height: "50%",width:"100%" }}>
       <ul
         style={{
           margin: 0,

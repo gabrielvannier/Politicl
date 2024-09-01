@@ -3,6 +3,7 @@ import GuessList from "./GuessList";
 import Input from "./Input";
 import { Person } from "../../utils/types";
 import Confetti from "react-confetti-boom";
+import { Hint } from "./Hint";
 import {
   load,
   selectExpectedPerson,
@@ -31,6 +32,7 @@ function Game() {
       ? JSON.parse(localStorage.getItem("dayNumber")!)
       : 0
   );
+  const [showHint, setShowHint] = useState(false);
 
   //clear the localStorage when the stored day number is different from the current day number
   useEffect(() => {
@@ -99,7 +101,10 @@ function Game() {
     return <div>Chargement...</div>;
   }
   return (
-    <div className="Game">
+    <div
+      className="Game"
+      style={{ width: "100%", display: "flex",flexDirection:"column",alignItems:"center" }}
+    >
       {guesses.length === 0 && (
         <div className="Start-advice">
           Recherche n'importe quelle personne pour commencer
@@ -126,7 +131,12 @@ function Game() {
         handleSubmit={handleSubmit}
         possibleGuessesRecord={possibleGuessesRecord}
         isFinished={isFinished}
+        setShowHint={setShowHint}
+        guessesLenght={guesses.length}
       />
+      {showHint && (
+        <Hint hintType={expectedPerson.hintType} hint={expectedPerson.hint} />
+      )}
       <GuessList guesses={guesses} expectedPerson={expectedPerson} />
     </div>
   );

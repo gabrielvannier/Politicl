@@ -42,21 +42,22 @@ const parseLine = function (line: string[]) {
         //deathDate: line[2] !== "" ? parseDate(line[2]) : null,
         party: line[3],
         highestRole: line[4],
-        deathDate:null
+        hintType: line[5] as "quote" | "hint",
+        hint: line[6] === "" ? null : line[6]
     }
 }
 export const load = function (
     setPossibleGuessesRecord: (value: Record<string, Person>) => void,
     setIsLoading: (value: boolean) => void
 ) {
-    fetch('./data.csv')
+    fetch('./data2.csv')
         .then(response => response.text())
         .then(responseText => {
             var data = Papa.parse(responseText);
             if (typeof (data.data) === "object") {
                 const newPossibleGuessesRecord: Record<string, Person> = {};
                 data.data.forEach(line => {
-                    if (Array.isArray(line) && line.length === 5) {
+                    if (Array.isArray(line) && line.length === 7) {
                         const newPerson = parseLine(line);
                         newPossibleGuessesRecord[newPerson.name] = newPerson;
                     }
