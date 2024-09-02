@@ -50,7 +50,7 @@ export const load = function (
     setPossibleGuessesRecord: (value: Record<string, Person>) => void,
     setIsLoading: (value: boolean) => void
 ) {
-    fetch('./data2.csv')
+    fetch('./data.csv')
         .then(response => response.text())
         .then(responseText => {
             var data = Papa.parse(responseText);
