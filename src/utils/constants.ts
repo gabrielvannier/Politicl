@@ -3,6 +3,7 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 
 export const MAX_NUMBER_OF_TRY = 6;
 
+export const MIN_GUESS_BEFORE_HINT = 3;
 export const partyRightnessScore = {
     "Parti Communiste Français": 1,
     "La France Insoumise": 2,

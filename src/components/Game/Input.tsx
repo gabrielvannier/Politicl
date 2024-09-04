@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 import { Autocomplete, TextField, Button, Tooltip } from "@mui/material";
 import { Person } from "../../utils/types";
-import { HowToVote, QuestionMark } from "@mui/icons-material";
-import { blue } from "../../utils/constants";
-import { yellow } from "@mui/material/colors";
-
+import { HowToVote, Lightbulb } from "@mui/icons-material";
+import { blue, MIN_GUESS_BEFORE_HINT } from "../../utils/constants";
 type InputProps = {
   handleSubmit: (e: React.FormEvent<Element>) => void;
   possibleGuessesRecord: Record<string, Person>;
@@ -39,7 +37,10 @@ function Input({
     handleSubmit(e);
     setKey(key + 1);
   };
-  const enableHintButton = !hasEnabledHint && guessesLenght >= 4;
+  const enableHintButton =
+    !hasEnabledHint && guessesLenght >= MIN_GUESS_BEFORE_HINT;
+
+
   const buttonStyle: React.CSSProperties = {
     minWidth: "55px",
     minHeight: "55px",
@@ -49,6 +50,7 @@ function Input({
     minHeight: "40px",
     borderRadius: "50%",
     backgroundColor: enableHintButton ? "orange" : "",
+    animation: enableHintButton ? 'bounce .3s infinite alternate': "",
   };
   return (
     <div className="Input-guess">
@@ -56,21 +58,29 @@ function Input({
         onSubmit={onSubmit}
         style={{ flexGrow: 1, display: "flex", gap: "1em" }}
       >
-        <Tooltip title={enableHintButton || hasEnabledHint ? "indice":"encore " + (4 - guessesLenght) + " essais pour débloquer l'indice"  }>
-            <span style={{display:"flex"}}>
-          <Button
-            type="button"
-            onClick={() => {
-              setShowHint(true);
-              setHasEnabledHint(true);
-            }}
-            disabled={!enableHintButton}
-            variant="contained"
-            style={hintButtonStyle}
-          >
-            <QuestionMark />
-          </Button>
-        </span>
+        <Tooltip
+          title={
+            enableHintButton || hasEnabledHint
+              ? "indice"
+              : "encore " +
+                (MIN_GUESS_BEFORE_HINT - guessesLenght) +
+                " essais pour débloquer l'indice"
+          }
+        >
+          <span style={{ display: "flex" }}>
+            <Button
+              type="button"
+              onClick={() => {
+                setShowHint(true);
+                setHasEnabledHint(true);
+              }}
+              disabled={!enableHintButton}
+              variant="contained"
+              style={hintButtonStyle}
+            >
+              <Lightbulb />
+            </Button>
+          </span>
         </Tooltip>
         <Autocomplete
           id="guess-input"

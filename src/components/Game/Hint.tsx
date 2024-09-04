@@ -21,7 +21,7 @@ export function Hint({ hintType, hint }: hintProps) {
     fontSize: isMobile ? "13px" : "20px",
     maxWidth: "90%",
   };
-  var hintTypeStyle: React.CSSProperties = {
+  const hintTypeStyle: React.CSSProperties = {
     border: "1px solid black",
     borderRadius: "3px",
     backgroundColor: hintType === "quote" ? "cyan" : "orange",
