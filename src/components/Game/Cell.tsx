@@ -1,85 +1,22 @@
-import React from "react";
-import { ColulmnName } from "../../utils/types";
+import React, { useEffect } from "react";
+import { ColumnName } from "../../utils/types";
 import { Advice } from "./Advice";
-import {
-  partyRightnessScore,
-  partyTraduction,
-  confettiColors,
-} from "../../utils/constants";
+import { partyRightnessScore, confettiColors } from "../../utils/constants";
 import Confetti from "react-confetti-boom";
 import { useIsMobile } from "../../utils/utils";
 import { Tooltip } from "@mui/material";
-import { RoleAdviceTooltip } from "./RoleAdviceTooltip";
+import { TooltipInside } from "./tooltip_inside/TooltipInside";
 import { Role } from "../../utils/types";
-
-const communDefaultStyle = {
-  border: "1px solid black",
-  borderRadius: "10px",
-  fontSize: "calc(1vw + 8px)",
-  display: "flex",
-};
-const columnStyle = {
-  name: {
-    width: "25%",
-  },
-  sexe: {
-    width: "10%",
-  },
-  highestRole: {
-    width: "20%",
-  },
-  birthDate: {
-    width: "10%",
-  },
-  party: {
-    width: "30%",
-  },
-};
-
-function ColumnHeadline({ displayedColumn }: { displayedColumn: ColulmnName }) {
-  const isMobile = useIsMobile();
-  const defaultStyle = {
-    ...columnStyle[displayedColumn],
-    lineHeight: "15px",
-    fontSize: "calc(1vw + 4px)",
-    //fontSize: "16px",
-    //border: "1px solid black",
-    //margin: "5px",
-  };
-  // artificialy augment the size of the birthDate column
-  if (displayedColumn === "birthDate" && isMobile) {
-    defaultStyle.width = "12%";
-  }
-  return <span style={defaultStyle}>{partyTraduction[displayedColumn]} :</span>;
-}
-
-export function ColumnHeadlines() {
-  return (
-    <div
-      className="Column-headlines"
-      style={{
-        display: "flex",
-        gap: "1%",
-        maxWidth: "1200px",
-        width: "97%",
-        justifyContent: "space-evenly",
-        margin: "1vw",
-        alignItems: "center",
-      }}
-    >
-      <ColumnHeadline displayedColumn="sexe" />
-      <ColumnHeadline displayedColumn="highestRole" />
-      <ColumnHeadline displayedColumn="party" />
-      <ColumnHeadline displayedColumn="birthDate" />
-      <ColumnHeadline displayedColumn="name" />
-    </div>
-  );
-}
+import {
+  mobileCellStyle,
+  desktopCellStyle,
+  columnWidthStyle,
+} from "../../utils/style_constants";
 
 type cellProps = {
   value: string | number | undefined;
   expectedValue: string | number;
-  displayedColumn: ColulmnName;
+  displayedColumn: ColumnName;
   displayOrder: number;
 };
 export function Cell({
@@ -93,48 +30,23 @@ export function Cell({
   const [displayConfeti, setDisplayConfeti] = React.useState<
     boolean | undefined
   >(undefined);
-  React.useEffect(() => {
+  useEffect(() => {
     if (value === undefined) {
       return;
     }
     setTimeout(() => setShouldDisplay(true), 700 * displayOrder - 650);
   }, [value, displayOrder]);
 
-  const mobileStyle: React.CSSProperties = {
-    ...communDefaultStyle,
-    ...columnStyle[displayedColumn],
-    height: "calc(14vw + 5px)",
-    flexDirection: "column",
-    justifyContent: "space-between",
-    paddingLeft: "1px",
-    paddingRight: "1px",
-    paddingTop: "5px",
-    paddingBottom: "5px",
-  };
-  const desktopStyle: React.CSSProperties = {
-    ...communDefaultStyle,
-    ...columnStyle[displayedColumn],
-    justifyContent: "center",
-    alignItems: "center",
-    height: "calc(4.5vw)",
+  const cellStyle = {
+    ...(isMobile ? mobileCellStyle : desktopCellStyle),
+    ...columnWidthStyle[displayedColumn],
+    opacity: shouldDisplay ? "1" : "0",
   };
   const emptyStyle = {
-    ...(isMobile ? mobileStyle : desktopStyle),
+    ...cellStyle,
     background: "#dcdcdc",
     color: "#dcdcdc",
     opacity: "0.5",
-  };
-  const correctStyle = {
-    ...(isMobile ? mobileStyle : desktopStyle),
-    background: "#8df38d",
-    color: "#000000",
-    opacity: shouldDisplay ? "1" : "0",
-  };
-  const incorrectStyle = {
-    ...(isMobile ? mobileStyle : desktopStyle),
-    background: "#da7373",
-    color: "#ffffff",
-    opacity: shouldDisplay ? "1" : "0",
   };
 
   if (value === undefined || shouldDisplay === false) {
@@ -145,32 +57,23 @@ export function Cell({
     );
   }
   const isCorrect = value === expectedValue;
-
-  if (isCorrect) {
-    if (displayedColumn === "name" && displayConfeti === undefined) {
-      setDisplayConfeti(true);
-      setTimeout(() => setDisplayConfeti(false), 1000);
-    }
-
-    return (
-      <span style={correctStyle}>
-        {value}
-        {displayConfeti && (
-          <Confetti
-            mode={"boom"}
-            effectCount={3}
-            particleCount={160}
-            colors={confettiColors}
-          />
-        )}
-        <Advice
-          value={value}
-          expectedValue={expectedValue}
-          displayedColumn={displayedColumn}
-        />
-      </span>
-    );
+  const correctStyle = {
+    ...cellStyle,
+    background: "#8df38d",
+    color: "#000000",
+  };
+  const incorrectStyle = {
+    ...cellStyle,
+    background: "#da7373",
+    color: "#ffffff",
+  };
+  // display confetti if the name is correct (means game is won)
+  if (isCorrect && displayedColumn === "name" && displayConfeti === undefined) {
+    setDisplayConfeti(true);
+    setTimeout(() => setDisplayConfeti(false), 1000);
   }
+
+  //if the party is almost correct, display a different orange color
   if (displayedColumn === "party") {
     if (
       partyRightnessScore[value as keyof typeof partyRightnessScore] ===
@@ -183,17 +86,28 @@ export function Cell({
 
   return (
     <Tooltip
-      style={{backgroundColor:"antiquewhite"}}
+      style={{ backgroundColor: "antiquewhite" }}
       title={
-        displayedColumn == "highestRole" && (
-          <RoleAdviceTooltip
-            guessRole={value as Role}
-            expectedRole={expectedValue as Role}
-          />
-        )
+        displayedColumn != "name" && displayedColumn != "sexe" &&
+        <TooltipInside
+          guessedValue={value}
+          expectedValue={expectedValue}
+          displayedColumn={displayedColumn}
+        />
       }
     >
-      <span style={incorrectStyle}>
+      <span
+        className="Filled-Cell"
+        style={isCorrect ? correctStyle : incorrectStyle}
+      >
+        {displayConfeti && (
+          <Confetti
+            mode={"boom"}
+            effectCount={3}
+            particleCount={160}
+            colors={confettiColors}
+          />
+        )}
         {value}
         <Advice
           value={value}

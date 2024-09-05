@@ -1,6 +1,6 @@
 import React, {useState,useEffect} from "react";
 import { partyRightnessScore, roleHierarchy } from "../../utils/constants";
-import { ColulmnName, Role } from "../../utils/types";
+import { ColumnName, Role } from "../../utils/types";
 import { useIsMobile } from "../../utils/utils";
 
 const getBirthDateAdvice = (birthdate: number, ecpectedBirthDate: number) => {
@@ -41,7 +41,7 @@ export const getRoleAvice = (guessRole: Role, expectedRole: Role) => {
     return "⬆️";
 }
 
-export const getAdviceText = (displayedColumn: ColulmnName, value: string | number, expectedValue: string | number) => {
+export const getAdviceText = (displayedColumn: ColumnName, value: string | number, expectedValue: string | number) => {
     if (displayedColumn === "birthDate" && typeof value === "number" && typeof expectedValue === "number") {
         return getBirthDateAdvice(value, expectedValue);
     }
@@ -60,7 +60,7 @@ export const getAdviceText = (displayedColumn: ColulmnName, value: string | numb
 type adviceProps = {
     value: string | number;
     expectedValue: string | number;
-    displayedColumn: ColulmnName;
+    displayedColumn: ColumnName;
 }
 export function Advice({ value, expectedValue, displayedColumn }: adviceProps) {
 

@@ -11,4 +11,4 @@ export type Person = {
     hint: string | null;
 };
 
-export type ColulmnName = "name" | "sexe" | "highestRole" | "birthDate" | "party";
+export type ColumnName = "name" | "sexe" | "highestRole" | "birthDate" | "party";

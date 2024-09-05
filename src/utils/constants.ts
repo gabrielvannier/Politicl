@@ -1,9 +1,9 @@
-import { ColulmnName, Role } from "./types";
+import { ColumnName, Role } from "./types";
 
 export const MAX_NUMBER_OF_TRY = 6;
 
 export const MIN_GUESS_BEFORE_HINT = 3;
-export const partyRightnessScore = {
+export const partyRightnessScore : Record<string,number> = {
     "Parti Communiste Français": 1,
 
     "La France Insoumise": 2,
@@ -33,7 +33,7 @@ export const partyRightnessScore = {
 
 }
 
-export const partyTraduction: Record<ColulmnName, string> = {
+export const partyTraduction: Record<ColumnName, string> = {
     "name": "Nom",
     "sexe": "Genre",
     "highestRole": "Plus haute fonction",

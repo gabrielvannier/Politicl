@@ -1,7 +1,8 @@
 import React from "react";
 import { Person } from "../../utils/types";
 import { MAX_NUMBER_OF_TRY } from "../../utils/constants";
-import { Cell, ColumnHeadlines } from "./Cell";
+import { Cell } from "./Cell";
+import { ColumnHeadlines } from "./ColumnHeadlines";
 
 function Guess({
   guess,

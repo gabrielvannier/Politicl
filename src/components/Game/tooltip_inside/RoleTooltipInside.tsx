@@ -1,7 +1,7 @@
 import React from "react";
-import { getRoleAvice } from "./Advice";
-import { roleHierarchy } from "../../utils/constants";
-import { Role } from "../../utils/types";
+import { getRoleAvice } from "../Advice";
+import { roleHierarchy } from "../../../utils/constants";
+import { Role } from "../../../utils/types";
 
 const shouldBeBold = (guessRole: Role, diplayedRole: Role, advice: "⬆️" | "⬇️") => {
   if (guessRole === diplayedRole) {
@@ -16,7 +16,7 @@ const shouldBeBold = (guessRole: Role, diplayedRole: Role, advice: "⬆️" | "�
   return false;
 };
 
-export function RoleAdviceTooltip({
+export function RoleTooltipInside({
   guessRole,
   expectedRole,
 }: {
@@ -25,7 +25,7 @@ guessRole: Role;
 }) {
   const adviceArrow = getRoleAvice(guessRole, expectedRole);
   if (adviceArrow === "✅") {
-    return <span>Le personne recherchée est un {guessRole}</span>;
+    return <span>Le personne recherchée est un(e) {guessRole} ✅</span>;
   }
   const roleList: Role[] = Object.keys(roleHierarchy) as Role[];
   return (
