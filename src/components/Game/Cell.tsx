@@ -6,7 +6,6 @@ import Confetti from "react-confetti-boom";
 import { useIsMobile } from "../../utils/utils";
 import { Tooltip } from "@mui/material";
 import { TooltipInside } from "./tooltip_inside/TooltipInside";
-import { Role } from "../../utils/types";
 import {
   mobileCellStyle,
   desktopCellStyle,
@@ -86,14 +85,16 @@ export function Cell({
 
   return (
     <Tooltip
-      style={{ backgroundColor: "antiquewhite" }}
+      enterTouchDelay={200}
       title={
-        displayedColumn != "name" && displayedColumn != "sexe" &&
-        <TooltipInside
-          guessedValue={value}
-          expectedValue={expectedValue}
-          displayedColumn={displayedColumn}
-        />
+        displayedColumn != "name" &&
+        displayedColumn != "sexe" && (
+          <TooltipInside
+            guessedValue={value}
+            expectedValue={expectedValue}
+            displayedColumn={displayedColumn}
+          />
+        )
       }
     >
       <span
