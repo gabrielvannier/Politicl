@@ -5,8 +5,11 @@ export const MAX_NUMBER_OF_TRY = 6;
 export const MIN_GUESS_BEFORE_HINT = 3;
 export const partyRightnessScore = {
     "Parti Communiste Français": 1,
+
     "La France Insoumise": 2,
     "Europe Écologie Les Verts": 2,
+    "Picardie debout !": 2,
+    
     "Parti Socialiste": 4,
     "Union des Démocrates pour la République": 4,
 
