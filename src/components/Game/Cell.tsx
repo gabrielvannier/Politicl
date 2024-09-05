@@ -6,6 +6,7 @@ import Confetti from "react-confetti-boom";
 import { useIsMobile } from "../../utils/utils";
 import { Tooltip } from "@mui/material";
 import { TooltipInside } from "./tooltip_inside/TooltipInside";
+import Zoom from '@mui/material/Zoom';
 import {
   mobileCellStyle,
   desktopCellStyle,
@@ -85,7 +86,21 @@ export function Cell({
 
   return (
     <Tooltip
-      enterTouchDelay={200}
+      enterTouchDelay={100}
+      slotProps={{
+        popper: {
+          modifiers: [
+            {
+              name: 'offset',
+              options: {
+                offset: [0, -14],
+              },
+            },
+          ],
+        },
+      }}
+      arrow
+      TransitionComponent={Zoom}
       title={
         displayedColumn != "name" &&
         displayedColumn != "sexe" && (
