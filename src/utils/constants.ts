@@ -9,7 +9,8 @@ export const partyRightnessScore = {
     "La France Insoumise": 2,
     "Europe Écologie Les Verts": 2,
     "Picardie debout !": 2,
-    
+    "L'Après": 2,
+
     "Parti Socialiste": 4,
     "Union des Démocrates pour la République": 4,
 
