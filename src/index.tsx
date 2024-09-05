@@ -7,12 +7,16 @@ import reportWebVitals from './reportWebVitals';
 import { ReportPage } from './components/ReportPage';
 import { ContributePage } from './components/Contribute';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
-root.render(
+root.render(  
   <React.StrictMode>
+    <Analytics />
+    <SpeedInsights />
     <Router>
       <Routes>
         <Route path="/" element={<App/>} />
