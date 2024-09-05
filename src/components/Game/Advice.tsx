@@ -1,6 +1,6 @@
 import React, {useState,useEffect} from "react";
-import { partyRightnessScore } from "../../utils/constants";
-import { ColulmnName } from "../../utils/types";
+import { partyRightnessScore, roleHierarchy } from "../../utils/constants";
+import { ColulmnName, Role } from "../../utils/types";
 import { useIsMobile } from "../../utils/utils";
 
 const getBirthDateAdvice = (birthdate: number, ecpectedBirthDate: number) => {
@@ -31,12 +31,25 @@ const getPartyAdvice = (party: string, expectedParty: string) => {
     return "⬅️";
 }
 
+export const getRoleAvice = (guessRole: Role, expectedRole: Role) => {
+    if (guessRole === expectedRole) {
+        return "✅";
+    }
+    if (roleHierarchy[guessRole] > roleHierarchy[expectedRole]) {
+        return "⬇️";
+    }
+    return "⬆️";
+}
+
 export const getAdviceText = (displayedColumn: ColulmnName, value: string | number, expectedValue: string | number) => {
     if (displayedColumn === "birthDate" && typeof value === "number" && typeof expectedValue === "number") {
         return getBirthDateAdvice(value, expectedValue);
     }
     if (displayedColumn === "party" && typeof value === "string" && typeof expectedValue === "string") {
         return getPartyAdvice(value, expectedValue);
+    }
+    if (displayedColumn === "highestRole") {
+        return getRoleAvice(value as Role, expectedValue as Role);
     }
     if (value === expectedValue) {
         return "✅";

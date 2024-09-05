@@ -1,5 +1,4 @@
-import { ColulmnName } from "./types";
-import useMediaQuery from '@mui/material/useMediaQuery';
+import { ColulmnName, Role } from "./types";
 
 export const MAX_NUMBER_OF_TRY = 6;
 
@@ -12,6 +11,7 @@ export const partyRightnessScore = {
     "Union des Démocrates pour la République": 4,
 
     "La République En Marche !": 6,
+    "Horizons": 6,
     "Renaissance": 6,
     "Union pour la Démocratie Française": 6,
     "Union pour la Défense de la République": 6,
@@ -37,6 +37,14 @@ export const partyTraduction: Record<ColulmnName, string> = {
     "party": "Parti politique"
 }
 
+export const roleHierarchy: Record<Role, number> = {
+    "Président": 5,
+    "Premier ministre": 4,
+    "Ministre": 3,
+    "Chef de parti": 2,
+    "Député": 1
+}
+
 export const winningTitle: string = "🎉🇫🇷 Félicitiations 🇫🇷🎉"
 
 export const winningDescription: string = "Tu as trouvé le politicl #"
@@ -57,3 +65,11 @@ export const blue = "#2b4e7a";
 export const white = "#FFFFFF";
 export const red = "#FF0000";
 export const confettiColors = [blue, white, red];
+
+
+
+
+// Birthdate advice
+const olderAdviceText = "la personne recherchée est après ";
+const youngerAdviceText = "la personne recherchée est avant ";
+const sameAgeAdviceText = "la personne recherchée est né en  ";

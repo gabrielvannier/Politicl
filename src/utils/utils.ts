@@ -1,5 +1,5 @@
 import * as Papa from "papaparse";
-import { Person } from "./types";
+import { Person, Role } from "./types";
 import { useMediaQuery } from "@mui/material";
 
 
@@ -41,7 +41,7 @@ const parseLine = function (line: string[]) {
         birthDate: parseDate(line[2]),
         //deathDate: line[2] !== "" ? parseDate(line[2]) : null,
         party: line[3],
-        highestRole: line[4],
+        highestRole: line[4] as Role,
         hintType: line[5] as "quote" | "hint",
         hint: line[6] === "" ? null : line[6]
     }

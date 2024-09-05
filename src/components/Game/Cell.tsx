@@ -8,13 +8,10 @@ import {
 } from "../../utils/constants";
 import Confetti from "react-confetti-boom";
 import { useIsMobile } from "../../utils/utils";
+import { Tooltip } from "@mui/material";
+import { RoleAdviceTooltip } from "./RoleAdviceTooltip";
+import { Role } from "../../utils/types";
 
-type cellProps = {
-  value: string | number | undefined;
-  expectedValue: string | number;
-  displayedColumn: ColulmnName;
-  displayOrder: number;
-};
 const communDefaultStyle = {
   border: "1px solid black",
   borderRadius: "10px",
@@ -40,11 +37,11 @@ const columnStyle = {
 };
 
 function ColumnHeadline({ displayedColumn }: { displayedColumn: ColulmnName }) {
-    const isMobile = useIsMobile();
-    const defaultStyle = {
+  const isMobile = useIsMobile();
+  const defaultStyle = {
     ...columnStyle[displayedColumn],
     lineHeight: "15px",
-    fontSize: "calc(1vw + 4px)"
+    fontSize: "calc(1vw + 4px)",
     //fontSize: "16px",
     //border: "1px solid black",
     //margin: "5px",
@@ -79,6 +76,12 @@ export function ColumnHeadlines() {
   );
 }
 
+type cellProps = {
+  value: string | number | undefined;
+  expectedValue: string | number;
+  displayedColumn: ColulmnName;
+  displayOrder: number;
+};
 export function Cell({
   value,
   expectedValue,
@@ -115,15 +118,26 @@ export function Cell({
     alignItems: "center",
     height: "calc(4.5vw)",
   };
+  const emptyStyle = {
+    ...(isMobile ? mobileStyle : desktopStyle),
+    background: "#dcdcdc",
+    color: "#dcdcdc",
+    opacity: "0.5",
+  };
+  const correctStyle = {
+    ...(isMobile ? mobileStyle : desktopStyle),
+    background: "#8df38d",
+    color: "#000000",
+    opacity: shouldDisplay ? "1" : "0",
+  };
+  const incorrectStyle = {
+    ...(isMobile ? mobileStyle : desktopStyle),
+    background: "#da7373",
+    color: "#ffffff",
+    opacity: shouldDisplay ? "1" : "0",
+  };
 
   if (value === undefined || shouldDisplay === false) {
-    const emptyStyle = {
-      ...(isMobile ? mobileStyle : desktopStyle),
-      background: "#dcdcdc",
-      color: "#dcdcdc",
-      opacity: "0.5",
-      //disable display
-    };
     return (
       <span className="Cell-empty" style={emptyStyle}>
         .
@@ -133,12 +147,6 @@ export function Cell({
   const isCorrect = value === expectedValue;
 
   if (isCorrect) {
-    const correctStyle = {
-      ...(isMobile ? mobileStyle : desktopStyle),
-      background: "#8df38d",
-      color: "#000000",
-      opacity: shouldDisplay ? "1" : "0",
-    };
     if (displayedColumn === "name" && displayConfeti === undefined) {
       setDisplayConfeti(true);
       setTimeout(() => setDisplayConfeti(false), 1000);
@@ -163,12 +171,6 @@ export function Cell({
       </span>
     );
   }
-  const incorrectStyle = {
-    ...(isMobile ? mobileStyle : desktopStyle),
-    background: "#da7373",
-    color: "#ffffff",
-    opacity: shouldDisplay ? "1" : "0",
-  };
   if (displayedColumn === "party") {
     if (
       partyRightnessScore[value as keyof typeof partyRightnessScore] ===
@@ -180,13 +182,25 @@ export function Cell({
   }
 
   return (
-    <span style={incorrectStyle}>
-      {value}
-      <Advice
-        value={value}
-        expectedValue={expectedValue}
-        displayedColumn={displayedColumn}
-      />
-    </span>
+    <Tooltip
+      style={{backgroundColor:"antiquewhite"}}
+      title={
+        displayedColumn == "highestRole" && (
+          <RoleAdviceTooltip
+            guessRole={value as Role}
+            expectedRole={expectedValue as Role}
+          />
+        )
+      }
+    >
+      <span style={incorrectStyle}>
+        {value}
+        <Advice
+          value={value}
+          expectedValue={expectedValue}
+          displayedColumn={displayedColumn}
+        />
+      </span>
+    </Tooltip>
   );
 }
