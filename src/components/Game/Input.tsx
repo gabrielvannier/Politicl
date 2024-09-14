@@ -96,6 +96,7 @@ function Input({
           clearOnBlur={true}
           selectOnFocus={true}
           style={{ flexGrow: 1 }}
+          inputMode="none"
         />
         <Tooltip title="Valider">
           <span>
