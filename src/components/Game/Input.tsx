@@ -55,19 +55,14 @@ function Input({
     minHeight: "55px",
   };
   const hintButtonStyle: React.CSSProperties = {
-    minWidth: "40px",
-    minHeight: "40px",
+    ...buttonStyle,
+    animation: enableHintButton ? "bounce .3s infinite alternate" : "",
     borderRadius: "50%",
     backgroundColor: enableHintButton ? "orange" : "",
-    animation: enableHintButton ? "bounce .3s infinite alternate" : "",
   };
   return (
     <div className="Input-guess">
-      <form
-        onSubmit={onSubmit}
-        style={{ flexGrow: 1, display: "flex", gap: "1em" }}
-      >
-        <Tooltip
+        <Tooltip className="HintButton"
           title={
             enableHintButton || hasEnabledHint
               ? "indice"
@@ -75,8 +70,8 @@ function Input({
                 (MIN_GUESS_BEFORE_HINT - guessesLenght) +
                 " essais pour débloquer l'indice"
           }
+          style={{ display: "flex", alignItems: "center" }}
         >
-          <span style={{ display: "flex" }}>
             <Button
               type="button"
               onClick={() => {
@@ -89,8 +84,11 @@ function Input({
             >
               <Lightbulb />
             </Button>
-          </span>
         </Tooltip>
+      <form
+        onSubmit={onSubmit}
+        style={{display: "flex",flexGrow: 1, gap: "10px"}}
+      >
         {isMobile ? (
           <FormControl style={{ flexGrow: 1 }}>
             <InputLabel id="guess-select-label">Rechercher</InputLabel>
