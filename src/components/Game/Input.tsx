@@ -1,10 +1,19 @@
-import React, { useState } from "react";
-import { Autocomplete, TextField, Button, Tooltip } from "@mui/material";
+import React, { useEffect, useState } from "react";
+import {
+  Autocomplete,
+  TextField,
+  Button,
+  Tooltip,
+  Select,
+  MenuItem,
+  SelectChangeEvent,
+} from "@mui/material";
 import { Person } from "../../utils/types";
 import { HowToVote, Lightbulb } from "@mui/icons-material";
 import { blue, MIN_GUESS_BEFORE_HINT } from "../../utils/constants";
+import { useIsMobile } from "../../utils/utils";
 type InputProps = {
-  handleSubmit: (e: React.FormEvent<Element>) => void;
+  handleSubmit: (name:string) => void;
   possibleGuessesRecord: Record<string, Person>;
   isFinished: boolean;
   setShowHint: (value: boolean) => void;
@@ -22,24 +31,22 @@ function Input({
   const [enableButton, setEnableButton] = useState<boolean>(false);
   const [hasEnabledHint, setHasEnabledHint] = useState<boolean>(false);
 
-  const handleInputChange = (
-    e: React.SyntheticEvent,
-    newInputValue: string
-  ) => {
-    setInputValue(newInputValue);
-    if (possibleGuessesRecord[newInputValue]) {
+  useEffect(() => {
+    if (possibleGuessesRecord[inputValue]) {
       setEnableButton(true);
     } else {
       setEnableButton(false);
     }
-  };
+  }, [inputValue, possibleGuessesRecord]);
   const onSubmit = (e: React.FormEvent<Element>) => {
-    handleSubmit(e);
+    e.preventDefault();
+    handleSubmit(inputValue);
+    setInputValue("");
     setKey(key + 1);
   };
+  const isMobile = useIsMobile();
   const enableHintButton =
     !hasEnabledHint && guessesLenght >= MIN_GUESS_BEFORE_HINT;
-
 
   const buttonStyle: React.CSSProperties = {
     minWidth: "55px",
@@ -50,7 +57,7 @@ function Input({
     minHeight: "40px",
     borderRadius: "50%",
     backgroundColor: enableHintButton ? "orange" : "",
-    animation: enableHintButton ? 'bounce .3s infinite alternate': "",
+    animation: enableHintButton ? "bounce .3s infinite alternate" : "",
   };
   return (
     <div className="Input-guess">
@@ -82,22 +89,40 @@ function Input({
             </Button>
           </span>
         </Tooltip>
-        <Autocomplete
-          id="guess-input"
+        {!isMobile && (
+          <Autocomplete
+            id="guess-autocomplete"
+            disabled={isFinished}
+            inputValue={inputValue}
+            onInputChange={(event,value)=>setInputValue(value)}
+            options={Object.values(possibleGuessesRecord)
+              .map((person) => person.name)
+              .sort()}
+            renderInput={(params) => (
+              <TextField {...params} label="Rechercher" />
+            )}
+            key={key} // This is the key to re-render the component
+            style={{ flexGrow: 1 }}
+          />
+        )}
+        {isMobile && (
+          <Select
+          id="guess-select"
           disabled={isFinished}
-          inputValue={inputValue}
-          onInputChange={handleInputChange}
-          options={Object.values(possibleGuessesRecord)
-            .map((person) => person.name)
-            .sort()}
-          autoHighlight={true}
-          renderInput={(params) => <TextField {...params} label="Rechercher" />}
-          key={key} // This is the key to re-render the component
-          clearOnBlur={true}
-          selectOnFocus={true}
           style={{ flexGrow: 1 }}
-          inputMode="none"
-        />
+          value={inputValue}
+          onChange={(e: SelectChangeEvent) => {setInputValue(e.target.value)}}
+          >
+            {Object.values(possibleGuessesRecord)
+              .map((person) => person.name)
+              .sort()
+              .map((personName) => (
+                <MenuItem key={personName} value={personName}>
+                  {personName}
+                </MenuItem>
+              ))}
+          </Select>
+        )}
         <Tooltip title="Valider">
           <span>
             <Button

@@ -82,19 +82,13 @@ function Game() {
     return isGameWinned(guesses, expectedPerson) || guesses.length > 5;
   };
 
-  const handleSubmit = (e: React.FormEvent<Element>) => {
-    e.preventDefault();
-    const guessInput = document.getElementById(
-      "guess-input"
-    ) as HTMLInputElement;
-    const newGuess = guessInput.value;
-    if (possibleGuessesRecord[newGuess]) {
+  const handleSubmit = (guessName:string) => {
+    if (possibleGuessesRecord[guessName]) {
       setGuesses((prevGuesses) => [
         ...prevGuesses,
-        possibleGuessesRecord[newGuess],
+        possibleGuessesRecord[guessName],
       ]);
     }
-    guessInput.value = "";
   };
 
   if (isLoading || expectedPerson === undefined) {
