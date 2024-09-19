@@ -7,13 +7,15 @@ import {
   Select,
   MenuItem,
   SelectChangeEvent,
+  FormControl,
+  InputLabel,
 } from "@mui/material";
 import { Person } from "../../utils/types";
 import { HowToVote, Lightbulb } from "@mui/icons-material";
 import { blue, MIN_GUESS_BEFORE_HINT } from "../../utils/constants";
 import { useIsMobile } from "../../utils/utils";
 type InputProps = {
-  handleSubmit: (name:string) => void;
+  handleSubmit: (name: string) => void;
   possibleGuessesRecord: Record<string, Person>;
   isFinished: boolean;
   setShowHint: (value: boolean) => void;
@@ -89,12 +91,32 @@ function Input({
             </Button>
           </span>
         </Tooltip>
-        {!isMobile && (
+        {isMobile ? (
+          <FormControl style={{ flexGrow: 1 }}>
+            <InputLabel id="guess-select-label">Rechercher</InputLabel>
+            <Select
+              labelId="guess-select-label"
+              id="guess-select"
+              disabled={isFinished}
+              value={inputValue}
+              onChange={(e: SelectChangeEvent) => setInputValue(e.target.value)}
+            >
+              {Object.values(possibleGuessesRecord)
+                .map((person) => person.name)
+                .sort()
+                .map((personName) => (
+                  <MenuItem key={personName} value={personName}>
+                    {personName}
+                  </MenuItem>
+                ))}
+            </Select>
+          </FormControl>
+        ) : (
           <Autocomplete
             id="guess-autocomplete"
             disabled={isFinished}
             inputValue={inputValue}
-            onInputChange={(event,value)=>setInputValue(value)}
+            onInputChange={(event, value) => setInputValue(value)}
             options={Object.values(possibleGuessesRecord)
               .map((person) => person.name)
               .sort()}
@@ -104,24 +126,6 @@ function Input({
             key={key} // This is the key to re-render the component
             style={{ flexGrow: 1 }}
           />
-        )}
-        {isMobile && (
-          <Select
-          id="guess-select"
-          disabled={isFinished}
-          style={{ flexGrow: 1 }}
-          value={inputValue}
-          onChange={(e: SelectChangeEvent) => {setInputValue(e.target.value)}}
-          >
-            {Object.values(possibleGuessesRecord)
-              .map((person) => person.name)
-              .sort()
-              .map((personName) => (
-                <MenuItem key={personName} value={personName}>
-                  {personName}
-                </MenuItem>
-              ))}
-          </Select>
         )}
         <Tooltip title="Valider">
           <span>
