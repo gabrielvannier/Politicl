@@ -1,6 +1,5 @@
 import React from "react";
 import { Person } from "../../utils/types";
-import { blue } from "../../utils/constants";
 import { useIsMobile } from "../../utils/utils";
 
 type hintProps = {
