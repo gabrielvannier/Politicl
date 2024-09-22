@@ -62,32 +62,35 @@ function Input({
   };
   return (
     <div className="Input-guess">
-        <Tooltip className="HintButton"
-          title={
-            enableHintButton || hasEnabledHint
-              ? "indice"
-              : "encore " +
-                (MIN_GUESS_BEFORE_HINT - guessesLenght) +
-                " essais pour débloquer l'indice"
-          }
-          style={{ display: "flex", alignItems: "center" }}
-        >
-            <Button
-              type="button"
-              onClick={() => {
-                setShowHint(true);
-                setHasEnabledHint(true);
-              }}
-              disabled={!enableHintButton}
-              variant="contained"
-              style={hintButtonStyle}
-            >
-              <Lightbulb />
-            </Button>
-        </Tooltip>
+      <Tooltip
+        className="HintButton"
+        title={
+          enableHintButton || hasEnabledHint
+            ? "indice"
+            : "encore " +
+              (MIN_GUESS_BEFORE_HINT - guessesLenght) +
+              " essais pour débloquer l'indice"
+        }
+        style={{ display: "flex", alignItems: "center" }}
+      >
+        <span>
+          <Button
+            type="button"
+            onClick={() => {
+              setShowHint(true);
+              setHasEnabledHint(true);
+            }}
+            disabled={!enableHintButton}
+            variant="contained"
+            style={hintButtonStyle}
+          >
+            <Lightbulb />
+          </Button>
+        </span>
+      </Tooltip>
       <form
         onSubmit={onSubmit}
-        style={{display: "flex",flexGrow: 1, gap: "10px"}}
+        style={{ display: "flex", flexGrow: 1, gap: "10px" }}
       >
         {isMobile ? (
           <FormControl style={{ flexGrow: 1 }}>

@@ -93,7 +93,6 @@ export async function getMainImageUrlFromWikipedia(url: string): Promise<string 
         // Check if there is a main image available
         if (page.pageimage) {
             // Return the URL of the main image
-            console.log('success finding image')
             return `https://en.wikipedia.org/wiki/Special:FilePath/${page.pageimage}`;
         } else {
             console.log('No main image available for this article.');
