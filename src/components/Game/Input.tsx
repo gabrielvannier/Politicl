@@ -10,6 +10,7 @@ import {
   FormControl,
   InputLabel,
 } from "@mui/material";
+import { HintButton } from "./HintButton";
 import { Person } from "../../utils/types";
 import { HowToVote, Lightbulb } from "@mui/icons-material";
 import { blue, MIN_GUESS_BEFORE_HINT } from "../../utils/constants";
@@ -31,7 +32,6 @@ function Input({
   const [key, setKey] = useState<number>(0);
   const [inputValue, setInputValue] = React.useState("");
   const [enableButton, setEnableButton] = useState<boolean>(false);
-  const [hasEnabledHint, setHasEnabledHint] = useState<boolean>(false);
 
   useEffect(() => {
     if (possibleGuessesRecord[inputValue]) {
@@ -47,47 +47,19 @@ function Input({
     setKey(key + 1);
   };
   const isMobile = useIsMobile();
-  const enableHintButton =
-    !hasEnabledHint && guessesLenght >= MIN_GUESS_BEFORE_HINT;
 
   const buttonStyle: React.CSSProperties = {
     minWidth: "55px",
     minHeight: "55px",
   };
-  const hintButtonStyle: React.CSSProperties = {
-    ...buttonStyle,
-    animation: enableHintButton ? "bounce .3s infinite alternate" : "",
-    borderRadius: "50%",
-    backgroundColor: enableHintButton ? "orange" : "",
-  };
   return (
     <div className="Input-guess">
-      <Tooltip
-        className="HintButton"
-        title={
-          enableHintButton || hasEnabledHint
-            ? "indice"
-            : "encore " +
-              (MIN_GUESS_BEFORE_HINT - guessesLenght) +
-              " essais pour débloquer l'indice"
-        }
-        style={{ display: "flex", alignItems: "center" }}
-      >
-        <span>
-          <Button
-            type="button"
-            onClick={() => {
-              setShowHint(true);
-              setHasEnabledHint(true);
-            }}
-            disabled={!enableHintButton}
-            variant="contained"
-            style={hintButtonStyle}
-          >
-            <Lightbulb />
-          </Button>
-        </span>
-      </Tooltip>
+      <HintButton
+        setShowHint={setShowHint}
+        guessesLenght={guessesLenght}
+        requiredGuesses={MIN_GUESS_BEFORE_HINT}
+        icon={<Lightbulb />}
+      />
       <form
         onSubmit={onSubmit}
         style={{ display: "flex", flexGrow: 1, gap: "10px" }}

@@ -173,11 +173,13 @@ export function FinishedPopUp({
         <div style={{ color: isWinned ? "green" : "red", fontWeight: "bold" }}>
           {expectedPerson.name}
         </div>
-        {imgUrl && <img
-          src={imgUrl}
-          alt={expectedPerson.name}
-          style={{ maxWidth: "130px", marginTop: "10px" }}
-        />}
+        {imgUrl && (
+          <img
+            src={imgUrl}
+            alt={expectedPerson.name}
+            style={{ maxWidth: "130px", marginTop: "10px" }}
+          />
+        )}
         <div
           style={{
             whiteSpace: "pre-wrap",

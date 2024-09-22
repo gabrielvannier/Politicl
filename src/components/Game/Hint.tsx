@@ -1,6 +1,7 @@
 import React from "react";
 import { Person } from "../../utils/types";
 import { useIsMobile } from "../../utils/utils";
+import { PopUp } from "./PopUp";
 
 type hintProps = {
   hintType: Person["hintType"];
