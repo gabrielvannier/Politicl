@@ -8,6 +8,7 @@ import {
   load,
   selectExpectedPerson,
   getDaySincePolitclFirstEdition,
+  getMainImageUrlFromWikipedia,
 } from "../../utils/utils";
 import { FinishedPopUp, GuidePopUp } from "./PopUp";
 import { confettiColors } from "../../utils/constants";
@@ -33,6 +34,7 @@ function Game() {
       : 0
   );
   const [showHint, setShowHint] = useState(false);
+  const [expectedPersonImgUrl, setExpectedPersonImgUrl] = useState<string | null>(null);
 
   //clear the localStorage when the stored day number is different from the current day number
   useEffect(() => {
@@ -68,9 +70,18 @@ function Game() {
       return;
     }
     localStorage.setItem("guesses", JSON.stringify(guesses));
-    setIsFinished(isGameFinished(guesses, expectedPerson!));
-    setIsWinned(isGameWinned(guesses, expectedPerson!));
+    setIsFinished(isGameFinished(guesses, expectedPerson));
+    setIsWinned(isGameWinned(guesses, expectedPerson));
   }, [guesses, expectedPerson]);
+
+  useEffect(() => {
+    if (expectedPerson === undefined) {
+      return;
+    }
+    getMainImageUrlFromWikipedia(expectedPerson.wikipedia_link).then((url) => {
+      setExpectedPersonImgUrl(url);
+    });
+  }, [expectedPerson]);
 
   const isGameWinned = (guesses: Person[], expectedPerson: Person) => {
     if (guesses.length === 0) {
@@ -111,6 +122,7 @@ function Game() {
           expectedPerson={expectedPerson}
           guesses={guesses}
           dayNumber={getDaySincePolitclFirstEdition()}
+          imgUrl={expectedPersonImgUrl}
         />
       )}
       {showEndFeatures && isWinned && (

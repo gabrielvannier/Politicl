@@ -8,7 +8,8 @@ export type Person = {
     highestRole: Role;
     sexe: string; //H or F
     hintType: "quote" | "hint";
-    hint: string | null;
+    hint: string;
+    wikipedia_link: string;
 };
 
 export type ColumnName = "name" | "sexe" | "highestRole" | "birthDate" | "party";

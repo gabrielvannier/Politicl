@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Person } from "../../utils/types";
 import { getAdviceText } from "./Advice";
 import { Button } from "@mui/material";
-import { ContentPaste } from "@mui/icons-material";
+import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import { blue } from "../../utils/constants";
 
 const getGuessResults = (guess: Person, expectedPerson: Person) => {
@@ -54,7 +54,7 @@ export function ShareButton({ expectedPerson, guesses, dayNumber }: { expectedPe
         setTextToCopy(getTextToShare(guesses, expectedPerson, dayNumber));
     }, [guesses, expectedPerson, dayNumber])
     return (
-        <Button variant="contained" endIcon={<ContentPaste />} onClick={copyToClipboard} style={{ backgroundColor: blue }} >{copied ? "Lien copié" : "Partager"}</Button>
+        <Button variant="contained" endIcon={<ContentCopyIcon />} onClick={copyToClipboard} style={{ backgroundColor: blue }} >{copied ? "Lien copié" : "Partager"}</Button>
 
     )
 }
