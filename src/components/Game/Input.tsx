@@ -12,21 +12,27 @@ import {
 } from "@mui/material";
 import { HintButton } from "./HintButton";
 import { Person } from "../../utils/types";
-import { HowToVote, Lightbulb } from "@mui/icons-material";
-import { blue, MIN_GUESS_BEFORE_HINT } from "../../utils/constants";
+import { HowToVote, Lightbulb, Image } from "@mui/icons-material";
+import {
+  blue,
+  MIN_GUESS_BEFORE_TEXT_HINT,
+  MIN_GUESS_BEFORE_IMG_HINT,
+} from "../../utils/constants";
 import { useIsMobile } from "../../utils/utils";
 type InputProps = {
   handleSubmit: (name: string) => void;
   possibleGuessesRecord: Record<string, Person>;
   isFinished: boolean;
-  setShowHint: (value: boolean) => void;
+  setShowTextHint: (value: boolean) => void;
+  setShowImgHint: (value: boolean) => void;
   guessesLenght: number;
 };
 function Input({
   handleSubmit,
   possibleGuessesRecord,
   isFinished,
-  setShowHint,
+  setShowTextHint,
+  setShowImgHint,
   guessesLenght,
 }: InputProps) {
   const [key, setKey] = useState<number>(0);
@@ -48,21 +54,43 @@ function Input({
   };
   const isMobile = useIsMobile();
 
+  const inputDivStyle: React.CSSProperties = {
+      width: '50%',
+      minWidth: '330px',
+      height: '30px',
+      marginLeft: 'auto',
+      marginRight: 'auto',
+      display: 'flex',
+      flexDirection: isMobile? "column-reverse" : "row",
+      marginTop: isMobile? '100px' : '0px',
+      alignItems: 'center',
+      alignContent: 'center',
+      gap: '10px',
+    }
+
   const buttonStyle: React.CSSProperties = {
     minWidth: "55px",
     minHeight: "55px",
   };
   return (
-    <div className="Input-guess">
-      <HintButton
-        setShowHint={setShowHint}
-        guessesLenght={guessesLenght}
-        requiredGuesses={MIN_GUESS_BEFORE_HINT}
-        icon={<Lightbulb />}
-      />
+    <div className="Input-guess" style={inputDivStyle}>
+      <div className="Hint-buttons" style={{display:"flex", justifyContent:"space-evenly",width:isMobile? '70%': '30%'}}>
+        <HintButton
+          setShowHint={setShowImgHint}
+          guessesLenght={guessesLenght}
+          requiredGuesses={MIN_GUESS_BEFORE_IMG_HINT}
+          icon={<Image />}
+        />
+        <HintButton
+          setShowHint={setShowTextHint}
+          guessesLenght={guessesLenght}
+          requiredGuesses={MIN_GUESS_BEFORE_TEXT_HINT}
+          icon={<Lightbulb />}
+        />
+      </div>
       <form
         onSubmit={onSubmit}
-        style={{ display: "flex", flexGrow: 1, gap: "10px" }}
+        style={{ display: "flex", flexDirection:"row", flexGrow: 1, gap: "10px", width: "100%" }}
       >
         {isMobile ? (
           <FormControl style={{ flexGrow: 1 }}>

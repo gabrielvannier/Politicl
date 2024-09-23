@@ -3,14 +3,15 @@ import GuessList from "./GuessList";
 import Input from "./Input";
 import { Person } from "../../utils/types";
 import Confetti from "react-confetti-boom";
-import { Hint } from "./Hint";
+import { TextHintPopUp } from "./popup/TextHintPopUp";
+import { ImgHintPopUp } from "./popup/ImgHintPopUp";
 import {
   load,
   selectExpectedPerson,
   getDaySincePolitclFirstEdition,
   getMainImageUrlFromWikipedia,
 } from "../../utils/utils";
-import { FinishedPopUp, GuidePopUp } from "./PopUp";
+import { FinishedPopUp, GuidePopUp } from "./popup/PopUp";
 import { confettiColors } from "../../utils/constants";
 
 function Game() {
@@ -33,7 +34,8 @@ function Game() {
       ? JSON.parse(localStorage.getItem("dayNumber")!)
       : 0
   );
-  const [showHint, setShowHint] = useState(false);
+  const [showTextHint, setTextShowHint] = useState(false);
+  const [showImgHint, setImgShowHint] = useState(false);
   const [expectedPersonImgUrl, setExpectedPersonImgUrl] = useState<string | null>(null);
 
   //clear the localStorage when the stored day number is different from the current day number
@@ -137,12 +139,17 @@ function Game() {
         handleSubmit={handleSubmit}
         possibleGuessesRecord={possibleGuessesRecord}
         isFinished={isFinished}
-        setShowHint={setShowHint}
+        setShowTextHint={setTextShowHint}
+        setShowImgHint={setImgShowHint}
         guessesLenght={guesses.length}
       />
-      {showHint && (
-        <Hint hintType={expectedPerson.hintType} hint={expectedPerson.hint} />
+      {showTextHint && (
+        <TextHintPopUp hintType={expectedPerson.hintType} hint={expectedPerson.hint} setShowHint={setTextShowHint}/>
       )}
+      {showImgHint && expectedPersonImgUrl && (
+        <ImgHintPopUp imgSrc={expectedPersonImgUrl} setShowHint={setImgShowHint}/>
+      )  
+      }
       <GuessList guesses={guesses} expectedPerson={expectedPerson} />
     </div>
   );

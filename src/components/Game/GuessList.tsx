@@ -3,6 +3,7 @@ import { Person } from "../../utils/types";
 import { MAX_NUMBER_OF_TRY } from "../../utils/constants";
 import { Cell } from "./Cell";
 import { ColumnHeadlines } from "./ColumnHeadlines";
+import { useIsMobile } from "../../utils/utils";
 
 function Guess({
   guess,
@@ -65,11 +66,12 @@ function GuessList({
   guesses: Person[];
   expectedPerson: Person;
 }) {
+  const isMobile = useIsMobile();
   if (expectedPerson === null) {
     return <div />;
   }
   return (
-    <div className="Guesses" style={{ marginTop: "50px", height: "50%",width:"100%" }}>
+    <div className="Guesses" style={{ marginTop: isMobile? "0px" : "50px", height: "50%",width:"100%" }}>
       <ul
         style={{
           margin: 0,

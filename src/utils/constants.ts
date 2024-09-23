@@ -2,7 +2,8 @@ import { ColumnName, Role } from "./types";
 
 export const MAX_NUMBER_OF_TRY = 6;
 
-export const MIN_GUESS_BEFORE_HINT = 3;
+export const MIN_GUESS_BEFORE_TEXT_HINT = 3;
+export const MIN_GUESS_BEFORE_IMG_HINT = 5;
 export const partyRightnessScore : Record<string,number> = {
     "Parti Communiste Français": 1,
 
