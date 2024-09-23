@@ -1,5 +1,5 @@
 import * as React from "react";
-
+import {TwitterShareButton, XIcon} from "react-share";
 import {
   Modal,
   ModalContent,
@@ -17,9 +17,9 @@ import {
   blue,
 } from "../../../utils/constants";
 import { Person } from "../../../utils/types";
-import { Button } from "@mui/material";
+import { Button, Tooltip } from "@mui/material";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
-import { ShareButton, getResultToShare } from "../ShareButton";
+import { ShareButton, getResultToShare, getTextToShare } from "../ShareButton";
 
 export function PopUp({
   title,
@@ -96,12 +96,21 @@ export function FinishedPopUp({
         >
           {getResultToShare(guesses, expectedPerson)}
         </div>
-        <div style={{ marginTop: "20px" }}>
+        <div style={{ marginTop: "20px", display:"flex", width:"100%", justifyContent:"center", gap:"20px"}}>
           <ShareButton
             expectedPerson={expectedPerson}
             guesses={guesses}
             dayNumber={dayNumber}
           />
+          <Tooltip title="Partager sur X">
+          <TwitterShareButton
+            url=" "
+            title={getTextToShare(guesses, expectedPerson, dayNumber)}
+            style={{alignItems:"center",display:"flex",borderRadius:"10%"}}
+          >
+            <XIcon size={32} />
+          </TwitterShareButton>
+          </Tooltip>
         </div>
       </div>
     </ModalContentDescription>
