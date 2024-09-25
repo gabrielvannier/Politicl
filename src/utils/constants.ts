@@ -13,7 +13,6 @@ export const partyRightnessScore : Record<string,number> = {
     "L'Après": 2,
 
     "Parti Socialiste": 4,
-    "Union des Démocrates pour la République": 4,
 
     "La République En Marche !": 6,
     "Horizons": 6,
@@ -24,6 +23,7 @@ export const partyRightnessScore : Record<string,number> = {
     "Les Républicains": 8,
     "Union pour un Mouvement Populaire": 8,
     "Rassemblement pour la République": 8,
+    "Union des Démocrates pour la République": 8,
     "Union pour la Nouvelle République": 8,
 
 
