@@ -20,6 +20,7 @@ export function ImgHintPopUp({ imgSrc, setShowHint }: imgHintPopUpProps) {
               width: "100%",
               height: "auto",
               borderRadius: "10px",
+              filter: "blur(4px)",
             }}
           />
         </div>
