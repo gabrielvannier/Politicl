@@ -21,6 +21,7 @@ export const partyRightnessScore : Record<string,number> = {
     "Union pour la Défense de la République": 6,
 
     "Les Républicains": 8,
+    "Républicains Indépendants": 8,
     "Union pour un Mouvement Populaire": 8,
     "Rassemblement pour la République": 8,
     "Union des Démocrates pour la République": 8,
